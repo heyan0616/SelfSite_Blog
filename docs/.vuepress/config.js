@@ -344,6 +344,7 @@ module.exports = {
 				children: [
 					'/DevOps/Git/',
 					'/DevOps/Git/GitUsage',
+					'/DevOps/Git/GitCase',
 				]
 			},
 			['/index/', '< 首页'],
