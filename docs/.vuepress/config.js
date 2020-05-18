@@ -156,7 +156,8 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/DevOps/Docker/',
-					'/DevOps/Ansible/'
+					'/DevOps/Ansible/',
+					'/DevOps/Git/',
 				]
 			},
 			{
@@ -335,6 +336,14 @@ module.exports = {
 				children: [
 					'/DevOps/Ansible/',
 					'/DevOps/Ansible/AnsibleStart',
+				]
+			},
+			{
+				title: 'Git',
+				collapsable: true,
+				children: [
+					'/DevOps/Git/',
+					'/DevOps/Git/GitUsage',
 				]
 			},
 			['/index/', '< 首页'],
