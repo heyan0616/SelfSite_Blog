@@ -1,0 +1,123 @@
+# Zookeeper与Etcd的对比
+
+::: tip 此文为转载 （通常一篇文章会参考多处，也会添加自己的理解，引用地址如有遗漏，请指出）
+
+- https://blog.csdn.net/zzhongcy/article/details/89401204
+
+:::
+
+<br />
+
+原文copy ...
+
+# 背景
+
+最近在看到Pachyderm的介绍时，看到作者拿YARN和Kubernetes做类比，拿Zookeeper和etcd做对比。YARN和Kubernetes的类比还相对比较好理解，毕竟他们都有资源管理和调度的职能，只不过YARN上运行的对象是JVM，而Kubernetes上运行的是容器。但是拿Zookeeper和etcd来类比我就有些不懂了，在我之前的概念里zookeeper并不是一个存储组件啊，因此有了本文的过程。
+
+
+
+# Zookeeper和etcd可以做类比吗？
+
+etcd的官网介绍是一个分布式的K/V存储，而Zookeeper的官网介绍是一个高度可用的分布式协调者。看起来他们做的事情完全不同啊，那我们来比较一下功能介绍。
+
+| 功能                 | etcd | Zookeeper |
+| :------------------- | :--- | :-------- |
+| 分布式锁             | 有   | 有        |
+| watcher              | 有   | 有        |
+| 一致性算法           | raft | zab       |
+| 选举                 | 有   | 有        |
+| 元数据(metadata)存储 | 有   | 有        |
+
+- watcher指的是订阅/通知，当一个值改变时，通知订阅过的节点，在etcd中是K/V值对的改变，在Zookeeper中是znode的改变（值改变、节点删除等）
+- raft和zab都是paxos算法的变形，都是为了解决分布式系统中的读写一致性问题
+- 选举都是通过相应的一致性算法实现的
+
+> 功能总结的不到位，欢迎补充
+
+从功能上看，他们干的事好像也都差不多，分布式的一致性、选举算法、分布式锁，那么，我们来看一下各自的**典型应用**吧。
+
+| 应用场景                 | etcd | Zookeeper |
+| ------------------------ | ---- | --------- |
+| 发布与订阅（配置中心）   | 有   | 有        |
+| 软负载均衡               | 有   | 有        |
+| 命名服务(Naming Service) | 有   | 有        |
+| 服务发现                 | 有   | 有        |
+| 分布式通知/协调          | 有   | 有        |
+| 集群管理与Master选举     | 有   | 有        |
+| 分布式锁                 | 有   | 有        |
+| 分布式队列               | 有   | 有        |
+
+> 分别参考了[ZooKeeper典型应用场景一览](http://jm.taobao.org/2011/10/08/1232/)和[ETCD：从应用场景到实现原理的全方位解读](http://www.sel.zju.edu.cn/?p=523)
+
+
+
+## zookeeper可以作为分布式存储吗?
+
+在应用场景上，etcd和Zookeeper也很一致，难道Zookeeper本质上是分布式存储组件，为此，我查了下 Zookeeper是否可以作为分布式存储系统？ 在知乎上的答案为 [zookeeper只存元数据](https://www.zhihu.com/question/22116083)，总结几点原因如下
+
+- znode只能存1M以内的数据
+- 写入性能低，为保证一致性，每次需要n/2+1的写入完成才算完成
+- zookeeper的数据是全部存储在内存,只适合存元数据
+- Zookeeper的使用场景是有高一致性的
+
+所以，逻辑上来说，可以。因为Zookeeper本质上是一个内存式的文件系统，它的znode就相当于dictionary和file的结合体，但是由于性能和存储容量以及使用场景来看，Zookeeper适合存有强一致性要求的配置信息，也就是元数据。
+
+到这一步，基本搞清楚了Zookeeper的应用场景了，如果etcd可以和Zookeeper作类比的话，难道etcd不是一个分布式存储组件？
+
+
+
+## etcd究竟是干啥的？
+
+回到etcd的官方文档，在Reference下看到一个[etcd versus other key-value stores](https://coreos.com/etcd/docs/latest/learning/why.html)目录，发现了etcd的名称由来，原来它是”/etc”和”d” for distributed 的结合体， 它存的也是大型分布式系统的配置信息，也就是distributed “/etc”
+
+到此可知，Zookeeper和etcd解决的问题是一样的，都解决分布式系统的协调和元数据的存储，所以它们都不是一个存储组件，或者说都不是一个分布式数据库。etcd灵感来源于Zookeeper，但在实现的时候有了很多的改进。
+
+- 更轻量级、更易用
+- 高负载下的稳定读写
+- 数据模型的多版本并发控制
+- 稳定的watcher功能，通知订阅者监听值的变化
+- 客户端协议使用gRPC协议，支持go、C++、Java等，而Zookeeper的RPC协议是自定制的，目前只支持C和Java
+- 可以容忍脑裂现象的发生
+
+脑裂现象指的是，在一个分布式集群中，只允许一个leader协调工作，由于网络或其他原因，导致一个集群分成了两个集群，产生了两个leader同时工作，此时集群不在具备读写一致性。
+
+> etcd是使用raft算法解决的脑裂问题，raft算法具体参考 [大神制作的动画](http://thesecretlivesofdata.com/raft/)
+
+
+
+## 总结
+
+### ZooKeeper
+
+1. watch children只能watch子节点，不能递归watch孙节点
+2. watch children只能watch子节点的创建和删除，不能watch子节点值的变化
+3. watch node只能对已经存在的node进行watch，对不存在的node需要watch existence
+   除了上述的这些不足以外，在其官网文档中自己也提到，在watch被触发和重新设置之间发生的事件将被丢弃，无法被捕捉。
+   接下来让我们看看Etcd的watch。
+
+### Etcd
+
+Etcd支持单点watch，prefix watch以及ranged watch。
+和ZooKeeper不同，Etcd不会根据事件的不同而要求调用不同的watch API，三类watch的区别仅在于对key的处理不同：
+
+1. 单点watch仅对传入的单个key进行watch；
+2. ranged watch可以对传入的key的范围进行watch，范围内的key的事件都会被捕捉；
+3. 而prefix则可以对所有具有给定prefix的key进行watch。
+
+<br/>
+
+之前在使用etcd的时候，只是在官网看到了分布式存储，就默认它为一个存储组件，导致了对etcd的误解，这也是第一次用到的时候没有深入了解导致的，在经过和Zookeeper的比较学习之后，发现两者在很多方面有着相同的特性。以前我对Zookeeper也有一定的误解，以为它是一个协调者，一定有管理的功能，可以控制很多东西，但经过这番学习之后，发现其实Zookeeper本质上也是一个存储单元，用于存放配置信息，解决分布式中的读写一致性问题。总的来说，etcd和Zookeeper有相似的功能，做的事情也大同小异，只是可能具体的应用场景不太一样，我目前的了解是Zookeeper主要用于Hadoop组件的协调上，etcd主要用与Kubernetes上对于容器的协调上，两者都是用于存放配置信息等元数据的，随着以后的深入学习，希望可以慢慢把他们的区别理清晰。
+
+<br>
+
+***不得不承认，作为后起之秀，Etcd在watch方面完胜ZooKeeper***。
+
+从功能的角度来看，Etcd只需要调用一次watch操作就可以捕捉所有的事件，相比ZooKeeper大大简化了客户端开发者的工作量。
+ZooKeeper的watch获得的channel只能使用一次，而Etcd的watch获得的channel可以被复用，新的事件通知会被不断推送进来，而无需客户端重复进行watch，这种行为也更符合我们对go channel的预期。
+
+ZooKeeper对事件丢失的问题没有解决办法。Etcd则提供了版本号帮助客户端尽量捕捉每一次变化。要注意的是每一次变化都会产生一个新的版本号，而这些版本不会被永久保留。Etcd会根据其版本留存策略定时将超出阈值的旧版本从版本历史中清除。
+
+从开发者的角度来看，ZooKeeper是用Java写的，且使用了自己的TCP协议。对于程序员来说不太友好，如果离开了ZooKeeper提供的SDK自己写客户端会有一定的技术壁垒，而ZooKeeper官方只提供了Java和C语言的SDK，其它语言的开发者就只能去寻求第三方库的帮助，比如github.com/samuel/go-zookeeper/zk。
+
+另一方面，Etcd是用Go写的，使用了Google的gRPC协议，官方除了提供Go语言的SDK之外，也提供了Java的SDK：https://github.com/etcd-io/jetcd。
+另外Etcd官方还维护了一个zetcd项目：https://github.com/etcd-io/zetcd，它在Etcd外面套了一个ZooKeeper的壳。让那些ZooKeeper的客户端可以无缝移植到Etcd上。有兴趣的小伙伴可以尝试一下。
