@@ -16,7 +16,7 @@ footer: © Copyright 2019 Yan - All Rights Reserved
 		<a href="/SomeKnowledges/" class="button-link">技术相关-零散</a>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 		-->
-		<a href="/OtherBlogs/" class="button-link">其他博客文章</a>
+		<a href="https://heyan.site:8003/" class="button-link" target="_self">其他博客文章</a>
 	</p>
 </template>
 <style scoped>
