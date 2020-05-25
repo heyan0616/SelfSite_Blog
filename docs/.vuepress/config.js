@@ -8,62 +8,64 @@ module.exports = {
   },
   themeConfig : {
     nav : [
-    	{
-            text: '技术主题',
-            items: [
-                { 
-                	text: 'Java相关', items: [
-                		{ text: 'index', link: '/Java/' },
-                	]
-                },
-                { 
-                	text: 'Architect相关', items: [
-                		{ text: 'index', link: '/Architect/' },
-                	]
-                },
-                { 
-                	text: '数据存储', items: [
-                		{ text: 'index', link: '/DataStorage/' },
-                	]
-                },
-                { 
-                	text: 'DevOps', items: [
-                		{ text: 'index', link: '/DevOps/' },
-                	]
-                },
-                { 
-                	text: '分布式', items: [
-                		{ text: 'index', link: '/DistributedSystem/' },
-                	]
-                },
-                { 
-                	text: '前端', items: [
-                		{ text: 'index', link: '/Frontend/' },
-                	]
-                },
-                { 
-                	text: '微服务相关', items: [
-                		{ text: 'index', link: '/Microservice/' },
-                	]
-                },
-                { 
-                	text: 'Monitor', items: [
-                		{ text: 'index', link: '/Monitor/' },
-                	]
-                },
-                { 
-                	text: 'Python', items: [
-                		{ text: 'index', link: '/Python/' },
-                	]
-                },
-                { 
-                	text: '一些知识', items: [
-                		{ text: 'index', link: '/SomeKnowledges/' },
-                	]
-                }
-            ],
-        },
-        { text: 'Develop Home', link: '/index/', target:'_self' },
+    	// {
+     //        text: '技术主题',
+     //        items: [
+     //            { 
+     //            	text: 'Java相关', items: [
+     //            		{ text: 'index', link: '/Java/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: 'Architect相关', items: [
+     //            		{ text: 'index', link: '/Architect/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: '数据存储', items: [
+     //            		{ text: 'index', link: '/DataStorage/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: 'DevOps', items: [
+     //            		{ text: 'index', link: '/DevOps/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: '分布式', items: [
+     //            		{ text: 'index', link: '/DistributedSystem/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: '前端', items: [
+     //            		{ text: 'index', link: '/Frontend/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: '微服务相关', items: [
+     //            		{ text: 'index', link: '/Microservice/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: 'Monitor', items: [
+     //            		{ text: 'index', link: '/Monitor/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: 'Python', items: [
+     //            		{ text: 'index', link: '/Python/' },
+     //            	]
+     //            },
+     //            { 
+     //            	text: '一些知识', items: [
+     //            		{ text: 'index', link: '/SomeKnowledges/' },
+     //            	]
+     //            }
+     //        ],
+     //    },
+     	{ text: 'Blog Home', link: '/', target:'_self' },
+        { text: 'Technical Blog Home', link: '/index/', target:'_self' },
+        { text: 'Other Blog Home', link: 'https://heyan.site:8002/', target:'_self' },
         { text: '留言', link: '/comments', target:'_self' },
         { text: 'Site Home', link: 'https://heyan.site/', target:'_self' },
     ],

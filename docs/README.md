@@ -10,13 +10,13 @@ footer: © Copyright 2019 Yan - All Rights Reserved
 ---
 <template>
 	<p class="action-link">
-		<a href="/index/" class="button-link">技术相关</a>
+		<a href="/index/" class="button-link">技术专题博客</a>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<!-- 	
 		<a href="/SomeKnowledges/" class="button-link">技术相关-零散</a>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 		-->
-		<a href="/OtherBlogs/" class="button-link">其他文章</a>
+		<a href="/OtherBlogs/" class="button-link">其他博客文章</a>
 	</p>
 </template>
 <style scoped>
@@ -53,16 +53,17 @@ footer: © Copyright 2019 Yan - All Rights Reserved
     }
 </style>
 
+
 <br>
 
 :::tip Something want to say:
 
 <br/>
 
-博客基于Vuepress，点击”[**技术相关**](https://heyan.site:8001/start/)“会进入技术专题总导航。同时也可以在标题栏的”**技术主题**“中直接链接到各专题页面。未来如果有一些非技术相关的文章，也会在标题栏中有相应链接。
-点击”[**其他文章**](https://heyan.site:8001/OtherBlogs/)“会进入其他博客文章的主页（待添加.待开发.）
+博客基于Vuepress，点击”[**技术专题博客**](https://heyan.site:8001/start/)“会进入技术专题总导航。同时也可以在标题栏的”**技术主题**“中直接链接到各专题页面。未来如果有一些非技术相关的文章，也会在标题栏中有相应链接。
+点击”[**其他博客文章**](https://heyan.site:8002/)“会进入其他非专题博客文章的主页（各种文章都有可能。技术的或者非技术的~）
 
-标题栏中的”[**Develop Home**](https://heyan.site:8001/index/)“同样直接跳转到总导航页面。
+标题栏中的”[**Blog Home**](https://heyan.site:8001/)“指向当前博客主页面；”[**Technical Blog Home**](https://heyan.site:8001/index/)“直接跳转到技术专题总导航页面；”[**Other Blog Home**](https://heyan.site:8002/)“直接跳转到其他博客首页。
 
 当然，可以在”[**留言**](https://heyan.site:8001/comments.html)“页面发表留言（使用方法参考页面说明）。
 
