@@ -89,7 +89,7 @@
   scp -r /xxxxxx/nginx_homepage/* root@heyan.site:/home/nginx_homepage
   ```
 
-  测试网站	https://heyan.site/
+  测试网站	http://heyan.site/
 
   <div style="display:flex;"><img src="./images/1-4.jpg" alt="home" style="zoom:40%;display:block;" align="left"/></div>
 

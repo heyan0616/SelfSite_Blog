@@ -67,7 +67,7 @@ module.exports = {
         { text: 'Technical Blog Home', link: '/index/', target:'_self' },
         { text: 'Other Blog Home', link: 'https://heyan.site:8003/', target:'_self' },
         { text: '留言', link: '/comments', target:'_self' },
-        { text: 'Site Home', link: 'https://heyan.site/', target:'_self' },
+        { text: 'Site Home', link: 'http://heyan.site/', target:'_self' },
     ],
     sidebarDepth : 2,
 	sidebar:{
