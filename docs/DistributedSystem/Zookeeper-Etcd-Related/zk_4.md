@@ -148,7 +148,7 @@ Mode: follower
 
 <br>
 
-<div style="display:flex;"><img src="./images/zk4-1.jpg" alt="" style="zoom:45%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk4-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 1.启动客户端
 
@@ -472,7 +472,7 @@ public void exist() throws Exception {
 
 <br>
 
-<div style="display:flex;"><img src="./images/zk4-2.jpg" alt="" style="zoom:45%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk4-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### 3.具体实现
 

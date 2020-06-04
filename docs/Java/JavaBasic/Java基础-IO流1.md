@@ -200,63 +200,63 @@ Java提供的对文件内容的访问，既可以读文件，也可以写文件�
 
 ### 概览
 
-<div style="display:flex;"><img src="./images/javaio-1-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### **输入输出流分类**
 
-<div style="display:flex;"><img src="./images/javaio-1-2.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### **节点流和处理流**
 
-<div style="display:flex;"><img src="./images/javaio-1-3.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 你要是对原始的流不满意，你可以在这根管道外面再套其它的管道，套在其它管道之上的流叫处理流。
 
 - **节点流类型**
 
-  <div style="display:flex;"><img src="./images/javaio-1-4.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-4.jpg" alt="" style="display:block;" align="left"/></div>
 
   节点流就是一根管道直接插到数据源上面，直接读数据源里面的数据，或者是直接往数据源里面写入数据。典型的节点流是文件流：文件的字节输入流（FileInputStream），文件的字节输出流（FileOutputStream），文件的字符输入流（FileReader），文件的字符输出流（FileWriter）。
 
 - **处理流类型**
 
-  <div style="display:flex;"><img src="./images/javaio-1-5.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-5.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### **InputStream(输入流)**
 
-<div style="display:flex;"><img src="./images/javaio-1-6.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-6.jpg" alt="" style="display:block;" align="left"/></div>
 
 我们看到的具体的某一些管道，凡是以InputStream结尾的管道，都是以字节的形式向我们的程序输入数据。
 
 - **InputStream的基本方法**
 
-  <div style="display:flex;"><img src="./images/javaio-1-7.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-7.jpg" alt="" style="display:block;" align="left"/></div>
 
   read()方法是一个字节一个字节地往外读，每读取一个字节，就处理一个字节。read(byte[] buffer)方法读取数据时，先把读取到的数据填满这个byte[]类型的数组buffer(buffer是内存里面的一块缓冲区)，然后再处理数组里面的数据。这就跟我们取水一样，先用一个桶去接，等桶接满水后再处理桶里面的水。如果是每读取一个字节就处理一个字节，这样子读取也太累了
 
 ### **OutputStream(输出流)**
 
-<div style="display:flex;"><img src="./images/javaio-1-8.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-8.jpg" alt="" style="display:block;" align="left"/></div>
 
 - **OutputStream的基本方法**
 
-  <div style="display:flex;"><img src="./images/javaio-1-9.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-9.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### **Reader流**
 
-<div style="display:flex;"><img src="./images/javaio-1-10.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-10.jpg" alt="" style="display:block;" align="left"/></div>
 
 - **Reader的基本方法**
 
-  <div style="display:flex;"><img src="./images/javaio-1-11.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-11.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### **Writer流**
 
-<div style="display:flex;"><img src="./images/javaio-1-12.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-12.jpg" alt="" style="display:block;" align="left"/></div>
 
 - **Writer的基本方法**
 
-  <div style="display:flex;"><img src="./images/javaio-1-13.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-13.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 
@@ -467,13 +467,13 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
   }
   ```
 
-  <div style="display:flex;"><img src="./images/javaio-1-16.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-16.jpg" alt="" style="display:block;" align="left"/></div>
 
   程序的输入指的是把从文件读取到的内容存储到为程序分配的内存区域里面去。流，什么是流，流无非就是两根管道，一根向里，一根向外，向里向外都是对于我们自己写的程序来说，流分为各种各样的类型，不同的分类方式又可以分为不同的类型，根据方向来分，分为输入流和输出流，根据读取数据的单位的不同，又可以分为字符流和字节流，除此之外，还可以分为节点流和处理流，节点流就是直接和数据源连接的流，处理流就是包在其它流上面的流，处理流不是直接和数据源连接，而是从数据源读取到数据以后再通过处理流处理一遍。缓冲流也包含了四个类：BufferedInputStream、BufferedOutputStream、BufferedReader和BufferedWriter。流都是成对的，没有流是是不成对的，肯定是一个in，一个out。
 
 - **第二种处理流——转换流**
 
-  <div style="display:flex;"><img src="./images/javaio-1-17.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-17.jpg" alt="" style="display:block;" align="left"/></div>
 
   转换流非常的有用，它可以把一个字节流转换成一个字符流，转换流有两种，一种叫InputStreamReader，另一种叫OutputStreamWriter。InputStream是字节流，Reader是字符流，InputStreamReader就是把InputStream转换成Reader。OutputStream是字节流，Writer是字符流，OutputStreamWriter就是把OutputStream转换成Writer。把OutputStream转换成Writer之后就可以一个字符一个字符地通过管道写入数据了，而且还可以写入字符串。我们如果用一个FileOutputStream流往文件里面写东西，得要一个字节一个字节地写进去，但是如果我们在FileOutputStream流上面套上一个字符转换流，那我们就可以一个字符串一个字符串地写进去。
 
@@ -506,7 +506,7 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
   }
   ```
 
-  <div style="display:flex;"><img src="./images/javaio-1-18.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-18.jpg" alt="" style="display:block;" align="left"/></div>
 
   ```java
   package cn.gacl.test;
@@ -535,11 +535,11 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
   }
   ```
 
-  <div style="display:flex;"><img src="./images/javaio-1-19.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-19.jpg" alt="" style="display:block;" align="left"/></div>
 
 - **第三种处理流——数据流**
 
-  <div style="display:flex;"><img src="./images/javaio-1-20.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-20.jpg" alt="" style="display:block;" align="left"/></div>
 
   数据流测试代码：
 
@@ -574,7 +574,7 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
 
 - **打印流——Print**
 
-  <div style="display:flex;"><img src="./images/javaio-1-21.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-21.jpg" alt="" style="display:block;" align="left"/></div>
 
   测试代码：
 
@@ -606,11 +606,11 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
   }
   ```
 
-  <div style="display:flex;"><img src="./images/javaio-1-22.jpg" alt="" style="zoom:90%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-22.jpg" alt="" style="display:block;" align="left"/></div>
 
 - **对象流——Object**
 
-  <div style="display:flex;"><img src="./images/javaio-1-23.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/javaio-1-23.jpg" alt="" style="display:block;" align="left"/></div>
 
   测试代码:
 
@@ -666,9 +666,9 @@ FileReader和FileWriter这两个流都是字符流，都是以一个字符为单
 
 ## **IO流总结**
 
-<div style="display:flex;"><img src="./images/javaio-1-24.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-24.jpg" alt="" style="display:block;" align="left"/></div>
 
-<div style="display:flex;"><img src="./images/javaio-1-25.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-25.jpg" alt="" style="display:block;" align="left"/></div>
 
 ### 在开发中正确使用IO流
 
@@ -744,7 +744,7 @@ public class Person implements Serializable{
 
 错误一：如果新建的 Person 对象没有实现 Serializable 接口，那么上面的操作会报错：
 
-<div style="display:flex;"><img src="./images/javaio-1-26.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-26.jpg" alt="" style="display:block;" align="left"/></div>
 
 **第三步：使用ObjectInputStream 对象实现反序列化** - **反序列化的对象必须要提供该对象的字节码文件.class**
 
@@ -769,7 +769,7 @@ transient private int age;//不需要序列化
 
 问题2：序列化版本问题，在完成序列化操作后，由于项目的升级或修改，可能我们会对序列化对象进行修改，比如增加某个字段，那么我们在进行反序列化就会报错：
 
-<div style="display:flex;"><img src="./images/javaio-1-27.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javaio-1-27.jpg" alt="" style="display:block;" align="left"/></div>
 
 解决办法：在 JavaBean 对象中增加一个 serialVersionUID 字段，用来固定这个版本，无论我们怎么修改，版本都是一致的，就能进行反序列化了
 

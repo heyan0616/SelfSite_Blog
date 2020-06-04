@@ -70,7 +70,7 @@
 
 下面这个关系模拟Arraylist。(除去最上层的Interator和最下面其他的接口)
 
-<div style="display:flex;"><img src="./images/javacollection-2-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javacollection-2-1.jpg" alt="" style="display:block;" align="left"/></div>
 ```java
 package com.demo;
 

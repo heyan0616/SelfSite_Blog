@@ -61,7 +61,7 @@ position和limit的具体含义取决于当前buffer的模式。capacity在两�
 
 ### **Buffer的常见方法**
 
-<div style="display:flex;"><img src="./images/nio-buffer-3.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-buffer-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 

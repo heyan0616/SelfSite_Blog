@@ -14,7 +14,7 @@
 
 <br>
 
-<div style="display:flex;"><img src="./images/zk3-1.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk3-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -38,7 +38,7 @@
 
 <br>
 
-<div style="display:flex;"><img src="./images/zk3-2.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk3-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -48,7 +48,7 @@
 2. Zookeeper 虽然在配置文件中并没有指定 **Master 和 Slave**。但是，Zookeeper 工作时， 是有一个节点为 Leader，其他则为 Follower，Leader 是通过内部的选举机制临时产生的。
 3. 以一个简单的例子来说明整个选举的过程。<br>假设有五台服务器组成的 Zookeeper 集群，它们的 id 从 1-5，同时它们都是最新启动的， 也就是没有历史数据，在存放数据量这一点上，都是一样的。假设这些服务器依序启动，来 看看会发生什么，如图所示
 
-<div style="display:flex;"><img src="./images/zk3-3.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk3-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 - 服务器 1 启动，发起一次选举。服务器 1 投自己一票。此时服务器 1 票数一票，不够半数以上(3 票)，选举无法完成，服务器 1 状态保持为 LOOKING;
 - 服务器 2 启动，再发起一次选举。服务器 1 和 2 分别投自己一票并交换选票信息: 此时服务器 1 发现服务器 2 的 ID 比自己目前投票推举的(服务器 1)大，更改选票为推举 服务器 2。此时服务器 1 票数 0 票，服务器 2 票数 2 票，没有半数以上结果，选举无法完成，服务器 1，2 状态保持 LOOKING;
@@ -62,6 +62,6 @@
 
 <br>
 
-<div style="display:flex;"><img src="./images/zk3-4.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/zk3-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>

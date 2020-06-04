@@ -53,7 +53,7 @@ ACID针对的是数据库事务（单机应用事务？）的四大特性(简称
 
 要理解内部一致性也就是我们通常所说的ACID中的一致性，就必须从反面考虑什么情况下是不一致的。不一致的情况主要有以下几种情况：
 
-<div style="display:flex;"><img src="./images/TACCB-1.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/TACCB-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 - 修改丢失：丢失修改是事务A和B先后更改数据数据x（假设初始是x0)，但是在A未正式更改前，B已经读取了原先的数据x0，最后A更改后为x1，B更改的并不是A更新后的x1，而是更改的x0，更改后假设为x2，这时x2将x1覆盖了，相当于事务A针对x的更改丢失了。
 - 脏读： 事务T1读取了T2更改的x，但是T2在实际存储数据时可能出错回滚了，这时T1读取的实际是无效的数据，这种情况下就是脏读
@@ -153,7 +153,7 @@ ACID针对的是数据库事务（单机应用事务？）的四大特性(简称
 
 所以CAP理论主要是针对分布式系统（特别是分布式存储领域）的，C是指Consistency一致性，A是指Availability可用性，P是指Partition tolerance分区容忍性。CAP定理认为分布式系统中这三个特性最多只能同时满足两个特性。下面我们来分别看下这三个特性究竟是什么意思。
 
-<div style="display:flex;"><img src="./images/TACCB-2.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/TACCB-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 - 一致性(Consistency): 指在分布式系统中的所有数据备份，在同一时刻是否同样的值。（等同于所有节点访问同一份最新的数据副本）
 - 可用性(Availability): 在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求。（对数据更新具备高可用性）

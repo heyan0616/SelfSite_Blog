@@ -130,28 +130,28 @@ reduce节点会将数据拷贝到自己的buffer缓存区中，当缓存区中�
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-2-1.jpg" alt="" style="zoom:70%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-2-1.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 ### **文件块与输入分片的关系**
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-2-2.jpg" alt="" style="zoom:70%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-2-2.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 ### **map及中间结果的输出**
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-2-3.jpg" alt="" style="zoom:70%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-2-3.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 ### **shuffle及reduce过程**
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-2-4.jpg" alt="" style="zoom:70%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-2-4.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 
@@ -492,7 +492,7 @@ static class FlowCountSortReducer extends Reducer<FlowBean, Text, Text, FlowBean
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-3.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -653,7 +653,7 @@ FileOutputFormat.setOutputCompressorClass(job, (Class<? extends CompressionCodec
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-4-1.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-4-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -686,7 +686,7 @@ FileOutputFormat.setOutputCompressorClass(job, (Class<? extends CompressionCodec
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-4-2.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-4-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -710,7 +710,7 @@ FileOutputFormat.setOutputCompressorClass(job, (Class<? extends CompressionCodec
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-4-3.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-4-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -730,7 +730,7 @@ Map方法之后，Reduce方法之前的数据处理过程称之为Shuffle。shuf
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-4-4.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-4-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 

@@ -29,7 +29,7 @@
 
 <br />
 
-<div style="display:flex;"><img src="./images/javacollection-1-1.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javacollection-1-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 ### Collection接口
@@ -135,7 +135,7 @@ element()或者peek()方法。
 - │———————|-**LinkedHashSet** 链表维护元素的插入次序 
 - │—————|-**TreeSet** 底层实现为二叉树，元素排好序
 
-<div style="display:flex;"><img src="./images/javacollection-1-2.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javacollection-1-2.jpg" alt="" style="display:block;" align="left"/></div>
 **Map** 接口 键值对的集合 （双列集合） 
 
 - │———**Hashtable** 接口实现类， 同步， 线程安全 
@@ -767,7 +767,7 @@ Map接口的常见实现类HashMap、TreeMap、LinkedHashMap、Properties(继承
 
 **HashMap**:	HashMap实现了Map、CloneMap、Serializable三个接口，并且继承自AbstractMap类。HashMap基于hash数组实现，若key的hash值相同则使用链表方式进行保存。
 
-<div style="display:flex;"><img src="./images/javacollection-1-3.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/javacollection-1-3.jpg" alt="" style="display:block;" align="left"/></div>
 存储自定义对象作为键时，必须重写hasCode和equals方法。存取无序的。下面演示HashMap以自定义对象作为键
 
 ```java

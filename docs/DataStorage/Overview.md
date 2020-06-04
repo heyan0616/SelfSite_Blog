@@ -16,7 +16,7 @@
 
 以下我们引用"451Group"分析报告中对数据库的分类，来对数据库做一个概览。
 
-<div style="display:flex;"><img src="./images/overview-1.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/overview-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 

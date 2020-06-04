@@ -38,7 +38,7 @@ sudo yum remove docker \
 
 It’s OK if `yum` reports that none of these packages are installed.
 
-#### **4.**安装需要的软件包
+#### **4**.安装需要的软件包
 
 Install required packages. `yum-utils` provides the `yum-config-manager` utility, and `device-mapper-persistent-data` and `lvm2` are required by the devicemapper storage driver.
 
@@ -94,6 +94,8 @@ https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
 具体可在个人界面“容器镜像服务”里面找到相关服务,如图
 
 <div style="display:flex;"><img src="./images/cdi-1.jpg" alt="容器镜像服务" style="zoom:40%;display:block;" align="left"/></div>
+<br>
+
 - **注册阿里云账号**
 - **配置镜像加速器**
 

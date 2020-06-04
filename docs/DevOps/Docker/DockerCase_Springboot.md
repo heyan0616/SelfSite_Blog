@@ -164,4 +164,4 @@ docker run -d -p 8888:8080 springbootdemo1
 
 如下输入 localhost:8888/test
 
-<div style="display:flex;"><img src="./images/dcs-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/dcs-1.jpg" alt="" style="display:block;" align="left"/></div>

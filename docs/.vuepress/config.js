@@ -326,6 +326,7 @@ module.exports = {
 					'/DevOps/Docker/',
 					'/DevOps/Docker/Docker',
 					'/DevOps/Docker/Docker_Enter',
+					'/DevOps/Docker/Docker_Commands',
 					'/DevOps/Docker/DockerCase_Nginx',
 					'/DevOps/Docker/DockerCase_Springboot',
 					'/DevOps/Docker/Docker_Compose',
@@ -445,6 +446,7 @@ module.exports = {
 				children: [
 					'/SomeKnowledges/',
 					'/SomeKnowledges/MacAlert',
+					'/SomeKnowledges/LinuxCommands',
 				]
 			},
 			['/index/', '< 首页'],		

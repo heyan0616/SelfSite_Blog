@@ -27,7 +27,7 @@
 
 **类层次结构**
 
-<div style="display:flex;"><img src="./images/nio-channal-1.jpg" alt="" style="zoom:70%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 
@@ -82,7 +82,7 @@ public class FileChannelTxt {
 
 运行效果：
 
-<div style="display:flex;"><img src="./images/nio-channal-2.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 通过上述实例代码，我们可以大概总结出FileChannel的一般使用规则：
 
@@ -215,11 +215,11 @@ public class WebServer {
 
 运行效果：<br>客户端：
 
-<div style="display:flex;"><img src="./images/nio-channal-3.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 服务端：
 
-<div style="display:flex;"><img src="./images/nio-channal-4.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 **通过上述实例代码，我们可以大概总结出SocketChannel和ServerSocketChannel的使用的一般使用规则：**<br>下面只给出大致步骤，不贴代码，可以结合上述实例理解。
 
@@ -291,7 +291,7 @@ Scatter/Gather应该使用直接的ByteBuffers以从本地I/O获取最大性能�
 
 “scattering read”是把数据从单个Channel写入到多个buffer,如下图所示：
 
-<div style="display:flex;"><img src="./images/nio-channal-5.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-5.jpg" alt="" style="display:block;" align="left"/></div>
 
 示例代码：
 
@@ -314,7 +314,7 @@ read()方法内部会负责把数据按顺序写进传入的buffer数组内。�
 
 “gathering write”把多个buffer的数据写入到同一个channel中，下面是示意图： 
 
-<div style="display:flex;"><img src="./images/nio-channal-6.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/nio-channal-6.jpg" alt="" style="display:block;" align="left"/></div>
 
 示例代码：
 

@@ -42,7 +42,7 @@ Stevens在文章中一共比较了五种IO Model：
 
 在Linux中，默认情况下所有的Socket都是阻塞IO。一个典型的阻塞读IO操作如下图所示:
 
-<div style="display:flex;"><img src="./images/iotheory-1.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iotheory-1.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 当应用进程调用了recvfrom这个系统调用，操作系统内核就开始了IO的第一个阶段 : 准备数据。<br>对于网络IO来说，很多情况下数据并不能一次性到达 (比如，还没有收到一个完整的UDP包 )，此时操作系统内核需要等待完整的数据到来。<br>此时，应用进程整个进程会被阻塞。<br>当操作系统内核数据准备好了，它会将数据从内核缓存中拷贝到应用内存，应用进程才解除阻塞的状态，重新运行。<br>**所以，阻塞IO的特点就是在IO操作的两个阶段准备数据和拷贝数据都被阻塞了**。
@@ -53,7 +53,7 @@ Stevens在文章中一共比较了五种IO Model：
 
 Linux下，可以通过设置Socket使其变为非阻塞IO。一个典型的非阻塞读IO操作如下图所示:
 
-<div style="display:flex;"><img src="./images/iotheory-2.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iotheory-2.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 当应用进程recvfrom这个系统调用，如果操作系统内核中的数据还没有准备好，那么它并不会阻塞应用进程，而是立刻返回一个error。从应用进程角度讲 ，它发起一个read操作后，并不需要阻塞，而是马上就得到了一个结果。当用户进程判断结果为error时，它能够判断数据还没有准备好，于是它可以再次发送read操作。<br>一旦操作系统内核中的数据准备完成，并且又再次收到了用户进程的read操作，那么它立刻将数据拷贝到了用户内存，然后成功标识。<br>**所以，在非阻塞式IO中，用户进程需要不断的轮询操作系统内核数据是否准备好**。
@@ -120,7 +120,7 @@ epoll是在2.6内核中提出的，是之前的select和poll的增强版本。�
 
 一个典型的异步读IO操作如下图所示:
 
-<div style="display:flex;"><img src="./images/iotheory-4.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iotheory-4.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 用户进程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。
@@ -152,7 +152,7 @@ epoll是在2.6内核中提出的，是之前的select和poll的增强版本。�
 
 #### **从同步、异步，以及阻塞、非阻塞两个维度来划分来看：**
 
-<div style="display:flex;"><img src="./images/iotheory-7.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iotheory-7.jpg" alt="" style="display:block;" align="left"/></div>
 
 > 最后，再举几个不是很恰当的例子来说明这四个IO Model:
 >
@@ -180,7 +180,7 @@ epoll是在2.6内核中提出的，是之前的select和poll的增强版本。�
 
 因此便出现了下面的两种高性能IO设计模式：**Reactor**和**Proactor**。
 
-<div style="display:flex;"><img src="./images/iotheory-6.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iotheory-6.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 从这里可以看出，上面的五种IO模型中的**多路复用IO**就是采用**Reactor**模式。注意，上面的图中展示的 是顺序处理每个事件，当然为了提高事件处理速度，可以通过多线程或者线程池的方式来处理事件。

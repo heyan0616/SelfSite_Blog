@@ -51,7 +51,7 @@ Ansible 系统由控制主机对被管节点的操作方式可分为两类，即
 
 ### **ansible 执行流程**
 
-<div style="display:flex;"><img src="./images/ansible-2.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/ansible-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 简单理解就是Ansible在运行时， 首先读取ansible.cfg中的配置， 根据规则获取Inventory中的管理主机列表， 并行的在这些主机中执行配置的任务， 最后等待执行返回的结果。
 

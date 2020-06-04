@@ -14,7 +14,7 @@
 
 <br>
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-1.jpg" alt="" style="zoom:35%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 **由上图可以看到，主要处理步骤包括：** 
 
@@ -85,7 +85,7 @@ recvfrom 函数(经 Socket 接收数据)，这里把它视为系统调用。
 
 <br />
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-2.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 从上图中我们可以看出，越往后，阻塞越少，理论上效率也是最优。<br>这五种 I/O 模型中，前四种属于同步 I/O，因为其中真正的 I/O 操作(recvfrom)将阻塞进程/线程，只有异步 I/O 模型才与 POSIX 定义的异步 I/O 相匹配。
 
@@ -99,7 +99,7 @@ recvfrom 函数(经 Socket 接收数据)，这里把它视为系统调用。
 
 <br>
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-3.jpg" alt="" style="zoom:35%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 **特点：**
 
@@ -124,7 +124,7 @@ recvfrom 函数(经 Socket 接收数据)，这里把它视为系统调用。
 
 **I/O 复用结合线程池，这就是 Reactor 模式基本设计思想，如下图：**
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-4.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 Reactor 模式，是指通过一个或多个输入同时传递给服务处理器的服务请求的事件驱动处理模式。 <br>服务端程序处理传入多路请求，并将它们同步分派给请求对应的处理线程，Reactor 模式也叫 Dispatcher 模式。<br>即 I/O 多路复用统一监听事件，收到事件后分发(Dispatch 给某进程)，是编写高性能网络服务器的必备技术之一。
 
@@ -147,7 +147,7 @@ Reactor 模式，是指通过一个或多个输入同时传递给服务处理器
 
 <br>
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-5.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-5.jpg" alt="" style="display:block;" align="left"/></div>
 
 其中，Select 是前面 I/O 复用模型介绍的标准网络编程 API，可以实现应用程序通过一个阻塞对象监听多路连接请求，其他方案示意图类似。
 
@@ -166,7 +166,7 @@ Reactor 模式，是指通过一个或多个输入同时传递给服务处理器
 
 <br>
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-6.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-6.jpg" alt="" style="display:block;" align="left"/></div>
 
 **方案说明：**
 
@@ -185,7 +185,7 @@ Reactor 模式，是指通过一个或多个输入同时传递给服务处理器
 
 <br>
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-7.jpg" alt="" style="zoom:55%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-7.jpg" alt="" style="display:block;" align="left"/></div>
 
 针对单 Reactor 多线程模型中，Reactor 在单线程中运行，高并发场景下容易成为性能瓶颈，可以让 Reactor 在多线程中运行。
 
@@ -224,7 +224,7 @@ Reactor 模式，是指通过一个或多个输入同时传递给服务处理器
 
 在 Reactor 模式中，Reactor 等待某个事件或者可应用或者操作的状态发生（比如文件描述符可读写，或者是 Socket 可读写）。<br>然后把这个事件传给事先注册的 Handler（事件处理函数或者回调函数），由后者来做实际的读写操作。<br>其中的读写操作都需要应用程序同步操作，所以 Reactor 是非阻塞同步网络模型。<br>如果把 I/O 操作改为异步，即交给操作系统来完成就能进一步提升性能，这就是异步网络模型 Proactor。
 
-<div style="display:flex;"><img src="./images/iomodelandthreadmodel-8.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/iomodelandthreadmodel-8.jpg" alt="" style="display:block;" align="left"/></div>
 
 **Proactor 是和异步 I/O 相关的，详细方案如下：**
 

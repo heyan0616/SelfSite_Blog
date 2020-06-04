@@ -91,7 +91,7 @@ JMS是最成功的异步消息传递技术之一。随着Java在许多大型企�
 （1）点对点模型
 
 在点对点模型中，应用程序由队列、发送者和接受者组成，每一条消息都被发送到特定的队列中，接受者从队列中获取相应的消息。
-<div style="display:flex;"><img src="./images/mqtheory-1.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-1.jpg" alt="" style="display:block;" aligh="left"/></div>
 特点：
 1. 每一条消息只有一个消费者，消息一旦被消费了就不在保留在消息队列中。
 2. 发送者和消费者之间在时间上没有依赖。
@@ -100,7 +100,7 @@ JMS是最成功的异步消息传递技术之一。随着Java在许多大型企�
 （2）发布订阅模型
 
 在发布订阅模型中，应用程序由主题、发布者和订阅者组成。发布者发布每一条消息，该消息通过主题传递给所有的订阅者。
-<div style="display:flex;"><img src="./images/mqtheory-2.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-2.jpg" alt="" style="display:block;" aligh="left"/></div>
 特点：
 1. 每一条消息可以有多个订阅者
 2. 发布者和订阅者之间有时间上的依赖关系 (针对某个主题（Topic）的订阅者，它必须创建一个订阅者之后，才能消费发布者的消息。)
@@ -152,7 +152,7 @@ JMS是最成功的异步消息传递技术之一。随着Java在许多大型企�
 
 JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消息传递服务）来支持他们的平台和编程语言，它效果还不错。但是碰到了互用性的问题。两套使用两种不同编程语言的程序如何通过它们的异步消息传递机制相互通信呢。此时就需要定义一个异步消息传递的通用标准。JMS或者NMS都没有标准的底层协议。它们可以在任何底层协议上运行，但是API是与编程语言绑定的。AMQP解决了这个问题，它使用了一套标准的底层协议，加入了许多其他特征来支持互用性，为现代应用丰富了消息传递需求。
 
-<div style="display:flex;"><img src="./images/mqtheory-4.jpg" alt="" style="zoom:40%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-4.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -160,7 +160,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 现在我们已经有了面向基于Java的企业应用的JMS和面向所有其他应用需求的AMQP。为什么我们还需要第三种技术？它是专门为小设备设计的。计算性能不高的设备不能适应AMQP上的复杂操作，它们需要一种简单而且可互用的方式进行通信。这是MQTT的基本要求，而如今，MQTT是物联网（IOT）生态系统中主要成分之一。
 
-<div style="display:flex;"><img src="./images/mqtheory-5.jpg" alt="" style="zoom:40%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-5.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -168,7 +168,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 <br>
 
-<div style="display:flex;"><img src="./images/mqtheory-6.jpg" alt="" style="zoom:40%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-6.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -176,7 +176,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 <br>
 
-<div style="display:flex;"><img src="./images/mqtheory-7.jpg" alt="" style="zoom:40%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-7.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -219,7 +219,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 共享数据，数据只有一份
 
-<div style="display:flex;"><img src="./images/mqtheory-8.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-8.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -227,7 +227,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 这种模式，写入、修改只能在主服务器；数据不仅在master中，还会同步到slave中，把数据放在多个地方，可以进行负载均衡；同步会占用，网络带宽。
 
-<div style="display:flex;"><img src="./images/mqtheory-9.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-9.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -235,7 +235,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 存在多个主机，相互进行数据同步；这种模式，写入可以在多个主服务器写入；读写，都可以实现负载均衡
 
-<div style="display:flex;"><img src="./images/mqtheory-10.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-10.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -243,7 +243,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 消息不会在多个主服务器之间同步，比如生产者将消息发送给broker-1，那么消息就会只存储在broker-1上<br>消息会产生对应的元数据（地址信息，哪条数据存放在哪个服务器上），元数据会在主服务器之间同步，同步元数据的开销比同步消息要小一些。<br>弊端：如果有一个节点挂掉，那么该节点的数据就无法读取出来
 
-<div style="display:flex;"><img src="./images/mqtheory-11.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-11.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 
@@ -251,7 +251,7 @@ JMS非常棒而且人们也非常乐意使用它。微软开发了NMS（.NET消�
 
 即实现负载均衡，也实现备份
 
-<div style="display:flex;"><img src="./images/mqtheory-12.jpg" alt="" style="zoom:60%;display:block;" aligh="left"/></div>
+<div style="display:flex;"><img src="./images/mqtheory-12.jpg" alt="" style="display:block;" aligh="left"/></div>
 
 <br>
 

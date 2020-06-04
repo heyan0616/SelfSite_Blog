@@ -19,7 +19,7 @@
 
 当前google提供为期一年的试用期，并提供300$的使用资金（但当我查看账号时显示如下金额，没搞懂~ 不过一年试用期是固定的。估计我也用不完。。）
 
-<div style="display:flex;"><img src="./images/vwgc-1.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-1.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 ### 创建VPS instance
@@ -28,14 +28,14 @@
 
 <br>
 
-<div style="display:flex;"><img src="./images/vwgc-2.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-2.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 #### 然后在instance界面“CREATE INSTANCE”
 
 <br>
 
-<div style="display:flex;"><img src="./images/vwgc-3.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-3.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 #### 创建instance
@@ -49,29 +49,29 @@
 
 选择完毕后，点击"**Create**"
 
-<div style="display:flex;"><img src="./images/vwgc-4-1.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
-<div style="display:flex;"><img src="./images/vwgc-4-2.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-4-1.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-4-2.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 #### 配置防火墙规则 - “Setup Firewall Rules”
 
 <br>
 
-<div style="display:flex;"><img src="./images/vwgc-5.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-5.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 点击“**CREATE FIREWALL RULE**” (rule名字自定义，主要关注以下三点)
 
 - 选择应用到所有instances
 - source ip设置成所有（也就是0.0.0.0）
 - 协议和端口设置为允许所有
 
-<div style="display:flex;"><img src="./images/vwgc-6.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-6.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 #### 设置静态IP
 
 切换到“**External IP addresses**"，点击“**Type**”选择“**Static**”，这样我们就可以有静态的ip地址了
 
-<div style="display:flex;"><img src="./images/vwgc-7.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-7.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 ### SSH登录设置
@@ -80,7 +80,7 @@
 
 在这之前，我们发现登录google的instance需要点击控制台上的**SSH**打开页面版consol来进行命令操作，非常低效。。
 
-<div style="display:flex;"><img src="./images/vwgc-8.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-8.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 我们还是希望类似之前的阿里云，能通过自己的客户端直接ssh上去，所以需要以下设置。
 
 - 点击*ssh*登录到instance，切换到root用户
@@ -131,7 +131,7 @@
 
   运行成功后会直接显示 V2Ray登录的相关信息
 
-  <div style="display:flex;"><img src="./images/vwgc-9.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/vwgc-9.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -149,12 +149,12 @@
 
 具体使用什么客户端，可自行网上搜索，这里我是mac系统，选用的是**V2RayX**客户端。把刚刚生成的信息填入到客户端，如下
 
-<div style="display:flex;"><img src="./images/vwgc-10.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-10.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 尝试连接youtube试试
 
-<div style="display:flex;"><img src="./images/vwgc-11.jpg" alt="Home.vue" style="zoom:20%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-11.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
 好了，You Did it!
@@ -183,7 +183,7 @@
 
 具体操作：如之前设置静态ip的时候一样，切换到“**External IP addresses**"，往后拉一点，点击“**CHANGE**”
 
-<div style="display:flex;"><img src="./images/vwgc-12.jpg" alt="Home.vue" style="zoom:20%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-12.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 
 选择"None"
 
@@ -191,7 +191,7 @@
 
 此时选择这个server，title上的“**RELEASE STATIC ADDRESS**”就会亮起来，点击它
 
-<div style="display:flex;"><img src="./images/vwgc-14.jpg" alt="Home.vue" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/vwgc-14.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 
 <br>
 

@@ -48,7 +48,7 @@ HDFS是Hadoop Distribute File System 的简称，意为：Hadoop分布式文件�
 
 模拟实现分布式文件系统图解:
 
-<div style="display:flex;"><img src="./images/hdfs-4.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hdfs-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -215,7 +215,7 @@ setrep
 
 NameNode负责管理整个文件系统元数据；DataNode负责管理具体文件数据块存储；Secondary NameNode协助NameNode进行元数据的备份。<br>`HDFS的内部工作机制对客户端保持透明，客户端请求访问HDFS都是通过向NameNode申请来进行。`
 
-<div style="display:flex;"><img src="./images/hdfs-1.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hdfs-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 **3.1． HDFS写数据流程**
 
@@ -231,7 +231,7 @@ NameNode负责管理整个文件系统元数据；DataNode负责管理具体文�
 
 **详细步骤图：(此图与上面步骤略有差别，但基本应该差不多)**
 
-<div style="display:flex;"><img src="./images/hdfs-2.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hdfs-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 **3.2． HDFS读数据流程**
 
@@ -249,11 +249,11 @@ NameNode负责管理整个文件系统元数据；DataNode负责管理具体文�
 
 **详细步骤图：**
 
-<div style="display:flex;"><img src="./images/hdfs-3.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hdfs-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 或者参考下图
 
-<div style="display:flex;"><img src="./images/hdfs-3-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hdfs-3-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 

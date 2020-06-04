@@ -265,7 +265,7 @@ yarn: $HADOOP_PREFIX/sbin/start-yarn.sh
 
 NameNode &emsp;&emsp;&emsp;&emsp;&emsp; http://nn_host:port/  	&emsp;&emsp;默认50070.<br>ResourceManager   &emsp;&emsp;	http://rm_host:port/  		&emsp;&emsp;默认 8088.
 
-<div style="display:flex;"><img src="./images/hadoopinstall-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/hadoopinstall-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 

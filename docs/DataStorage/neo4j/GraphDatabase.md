@@ -87,7 +87,7 @@
 
 下图展示的是一个通用的图计算引擎部署架构。该架构包括一个带有OLTP属性的记录系统（SOR）数据库（如MySQL、Oracle或Neo4j），它给应用程序提供服务，请求并响应应用程序在运行中发送过来的查询。每隔一段时间，一个抽取、转换和加载（ETL）作业就会将记录系统数据库的数据转入图计算引擎，供离线查询和分析。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-8.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-8.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 图计算引擎多种多样。最出名的有`内存的`、`单机的`图计算引擎Cassovary，以及`分布式`的图计算引擎Pegasus和Giraph。大多数分布式图计算引擎都是基于Google发布的Pregel白皮书，它主要讲述了Google如何使用图计算引擎来计算网页排名。
@@ -101,7 +101,7 @@
 - 第三是以Titan/JanusGraph为代表的使用外置nosql存储如hbase，以及使用外置的索引生成工具如elasticsearch，olap支持外接spark等工具。
 - 第四是在图计算上基于batch进行优化的新一代图数据库，如dgraph。dgraph的存储结构与cayley同样借鉴了google的论文，将每个节点的属性也作为一个节点与主节点产生联系，这样更有益与基于batch来设计运算方法。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-1.jpg" alt="" style="zoom:50%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
@@ -115,7 +115,7 @@
 
 关于Neo4j的存储结构，Neo4j将图结构和属性数据等进行了分离，以此提供高性能的图遍历.
 
-<div style="display:flex;"><img src="./images/GraphDatabase-2.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-2.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 图中的节点和联系的存储文件都是固定大小的，每个记录长度为9字节，因此可以可以在O(1)O(1)的时间复杂度下计算位置.
@@ -134,32 +134,32 @@
 
 图数据库可以轻松应对海量高度互连社交数据的实时存储和高效查询，帮助您快速构建复杂的社交网络系统。例如，在一个典型的社交网络中，常常会存在“谁认识谁，谁上过什么学校，谁常住什么地方，谁喜欢什么餐馆”等查询，传统关系型数据库对于超过3度的查询往往会很低效甚至无法支持，但图数据库从基因层面提供了解决方案，轻松应对社交网络的各种复杂存储和查询。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-3.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-3.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 - **金融欺诈检测**
 
 在金融领域，图数据库经常用于欺诈检测。例如，通过贷款、分期消费者的联系人（或者联系人的联系人）信用信息，对用户进行信用评分，如果评分较低，则拒绝贷款或者提升利率；通过申请人的个人信息（包括电话号码、家庭住址），判断申请人信息是否属实。通常，欺诈者是通过“黑市”购买的用户信息然后拼凑出“个人信息”，并且这些信息会被反复使用，使用图数据库，可以快速发现申请人提供的个人信息与现有用户信息的关系。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-4.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-4.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 - **实时推荐引擎**
 
 图数据库非常适合实时推荐场景。您可以将用户的购买行为、位置、好友关系、收藏等数据实时存储在图数据库中，然后利用图数据库能对高度互连数据提供高效查询的特点，通过各种维度的快速查询实时进行多维度个性化推荐。例如，在某APP中，通过用户位置及以前的购买行为信息，当某用户A到达某商场B，APP可以向用户实时推荐附近的门店及商品等信息。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-5.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-5.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 - **知识图谱**
 
 图数据库可以帮助您快速构建知识图谱。您可以将图谱数据存储在图数据库中，既可以通过外部输入实时更新，也可以对图数据库内部图谱信息进行分析，不断发现并完善图谱数据。例如，基于图数据库，您可以快速实现针对足球明星的知识图谱应用，帮助用户发现感兴趣的信息。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-6.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-6.jpg" alt="" style="display:block;" align="left"/></div>
 <br>
 
 - **网络/IT运营**
 
 图数据库非常适合网络/IT运营相关场景。例如，您可以将路由器、交换机、防火墙、服务器等各种网络设备、终端及其拓扑信息存储在图数据库中，当某服务器或终端遭受恶意攻击或者受到感染时，您可以通过图数据库快速分析并找到传播路径，然后进行相关追踪及处理。
 
-<div style="display:flex;"><img src="./images/GraphDatabase-7.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/GraphDatabase-7.jpg" alt="" style="display:block;" align="left"/></div>

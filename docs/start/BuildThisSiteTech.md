@@ -29,10 +29,10 @@
 
 如下图，我把原主页html的各个模块拆成单独的home component，修改起来会方便很多。（这里关于如何搭建Vue工程之类的，可以参考网上教程，我也会在后续的blog中慢慢补上）
 
-<div style="display:flex;"><img src="./images/1-1.jpg" alt="目录结构" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/1-1.jpg" alt="目录结构" style="display:block;" align="left"/></div>
 同时将原模板下的assets放到了src目录下，在Home.vue下引用即可
 
-<div style="display:flex;"><img src="./images/1-2.jpg" alt="Home.vue" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/1-2.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 至于修改样式什么的就仁者见仁了，这里不细说。
 
 个人网站的雏形大概有了。这个时候你可以部署到服务器上访问，对外展示你的第一个personal page!
@@ -71,7 +71,7 @@
 
   vue项目build后会在项目下生成dist目录，此目录下就是build出来的文件
 
-  <div style="display:flex;"><img src="./images/1-3.jpg" alt="dist" style="zoom:40%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/1-3.jpg" alt="dist" style="display:block;" align="left"/></div>
 
 - 本地docker测试
 
@@ -91,7 +91,7 @@
 
   测试网站	http://heyan.site/
 
-  <div style="display:flex;"><img src="./images/1-4.jpg" alt="home" style="zoom:40%;display:block;" align="left"/></div>
+  <div style="display:flex;"><img src="./images/1-4.jpg" alt="home" style="display:block;" align="left"/></div>
 
 
 
@@ -128,7 +128,7 @@
 
 Vuepress的部署完全同前端部署，创建单独的工作目录nginx_blog，映射8001端口。部署好后，可以单独访问，主页中涉及博客相关会跳转到这个地址；同时blog右上角有链接‘Site Home’跳回主页。
 
-<div style="display:flex;"><img src="./images/1-5.jpg" alt="blog site" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/1-5.jpg" alt="blog site" style="display:block;" align="left"/></div>
 Vuepress的侧边栏、标题栏的配置也是基于官网介绍，根据各自的需求设置层级就行了，就不详细介绍了。
 
 

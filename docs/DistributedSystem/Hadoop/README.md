@@ -35,7 +35,7 @@ Hadoop 是一个由 Apache 基金会用java 语言实现的分布式系统基础
 - `HBase`:分布式数据库
 - ... ...
 
-<div style="display:flex;"><img src="./images/base-2.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/base-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 
@@ -43,7 +43,7 @@ Hadoop 是一个由 Apache 基金会用java 语言实现的分布式系统基础
 
 Hadoop1.x 版本MapReduce不仅负责计算部分，同时还要负责资源管理；但自从2.0开始，Hadoop将资源管理独立出来，也就是后来的YARN。
 
-<div style="display:flex;"><img src="./images/base-1.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/base-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 
 

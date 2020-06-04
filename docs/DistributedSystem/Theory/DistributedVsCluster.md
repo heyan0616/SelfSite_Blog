@@ -99,13 +99,13 @@
 
 什么是集群，就是我开饭店，雇了好多个水平一模一样的厨师，既可以同时帮我做菜（高吞吐量），而且万一有一个厨师回家娶媳妇了，我饭店里还有别的厨师（他们可能会比平时忙），不至于要关门停业（高可用）<br>我们常用的缓存服务器，比如Memcached和Redis，都是集群架构，以Memcached为例，一开始我们只有一个Memcached节点：
 
-<div style="display:flex;"><img src="./images/DistributedAndCluster-1.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/DistributedAndCluster-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 Client把一些数据放到Memcached中，省的每次都是数据库查，如果只有一个Memcached，那一旦请求压力大了，Memcached很快就忙不过来（虽然Memcached是多线程），而且一旦Memcached挂了，那就没有缓存可以用了，全部请求都会走数据库，数据库的压力会骤然增加！
 
 所以我们加多了两个Memcached节点，形成**Memcached集群**：
 
-<div style="display:flex;"><img src="./images/DistributedAndCluster-2.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/DistributedAndCluster-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 Memcached集群实现了开头提到的两个特性：
 
@@ -122,11 +122,11 @@ Memcached集群实现了开头提到的两个特性：
 
 还是上面那张图，换个角度去看，就是分布式了，之前我们只看到了三台Memcached节点，上面说了，这只是集群，那要怎么看才是分布式呢？**把眼睛睁大！看整张图！**
 
-<div style="display:flex;"><img src="./images/DistributedAndCluster-3.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/DistributedAndCluster-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 为什么说整张图就是分布式了？因为这些节点各司其职，有专门负责数据持久化存储的（Database），有对外提供业务访问的（Client，姑且认为是一个商品查询服务吧），也有负责数据缓存的（Memcached）<br>什么？你说这样还不够分布式？那就这样吧（画的有点ugly...）：
 
-<div style="display:flex;"><img src="./images/DistributedAndCluster-4.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/DistributedAndCluster-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 够分布式了吧 (￣▽￣)~*<br>分布式同样实现了开头提到的两个特性：
 

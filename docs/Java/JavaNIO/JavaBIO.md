@@ -18,7 +18,7 @@
 
 最原始BIO通信模型图：
 
-<div style="display:flex;"><img src="./images/bio-1.jpg" alt="" style="zoom:60%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/bio-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 存在的问题：
 
@@ -31,7 +31,7 @@
 
 那有没有方法改进呢? ，答案是有的。改进后BIO通信模型图：
 
-<div style="display:flex;"><img src="./images/bio-2.jpg" alt="" style="zoom:90%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/bio-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 此种BIO通信模型的服务端，通常由一个独立的Acceptor线程负责监听客户端的连接，它接收到客户端连接请求之后为每个客户端创建一个新的线程进行链路处理,每处理完成后，通过输出流返回应答给客户端，线程销毁。即典型的一请求一应答通宵模型。**代码演示**:
 
@@ -254,7 +254,7 @@ class ClientRequestThread implements Runnable {
 
 伪异步I/O模型图：
 
-<div style="display:flex;"><img src="./images/bio-3.jpg" alt="" style="zoom:90%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/bio-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 **代码演示** - 只给出服务端(客户端和上面相同)
 
@@ -365,7 +365,7 @@ class SocketServerThreadPool implements Runnable {
 
 服务器端的执行效果
 
-<div style="display:flex;"><img src="./images/bio-4.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/bio-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 在 **`Socket socket = serverSocket.accept();`** 处打了断点，有20个客户端同时发出请求，可服务端还是一个一个的处理，其它线程都处于阻塞状态
 
@@ -379,7 +379,7 @@ class SocketServerThreadPool implements Runnable {
 
 服务器线程发起一个accept动作，询问操作系统 是否有新的socket套接字信息从端口xx发送过来。<br>注意，是询问操作系统。也就是说socket套接字的IO模式支持是基于操作系统的，那么自然同步IO/异步IO的支持就是需要操作系统级别的了。如下图：
 
-<div style="display:flex;"><img src="./images/bio-5.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/bio-5.jpg" alt="" style="display:block;" align="left"/></div>
 
 如果操作系统没有发现有套接字从指定的端口xx来，那么操作系统就会等待。这样serverSocket.accept()方法就会一直等待。这就是为什么accept()方法为什么会阻塞：**它内部的实现是使用的操作系统级别的同步IO**。
 

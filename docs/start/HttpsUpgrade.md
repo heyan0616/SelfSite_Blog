@@ -8,11 +8,11 @@
 
 进入阿里云控制台，搜索“证书服务”，选择SSL证书，进入界面：
 
-<div style="display:flex;"><img src="./images/https-1.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/https-1.jpg" alt="" style="display:block;" align="left"/></div>
 
 点“选购证书”
 
-<div style="display:flex;"><img src="./images/https-2.jpg" alt="" style="zoom:30%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/https-2.jpg" alt="" style="display:block;" align="left"/></div>
 
 选择个人免费版后，然后立即购买。
 
@@ -20,11 +20,11 @@
 
 几分钟后，证书显示“已签发”
 
-<div style="display:flex;"><img src="./images/https-3.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/https-3.jpg" alt="" style="display:block;" align="left"/></div>
 
 最后点击下载，选择Nginx
 
-<div style="display:flex;"><img src="./images/https-4.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/https-4.jpg" alt="" style="display:block;" align="left"/></div>
 
 下载解压后，会看到两个文件 （一个.key文件，一个.pem文件）
 
@@ -40,7 +40,7 @@
 
 1. 在/conf.d文件夹下创建cert文件夹，然后将证书文件copy进去（当然也可以在最外层新建/cert文件夹。。此处图方便，用已有的文件夹存放）
 
-   <div style="display:flex;"><img src="./images/https-5.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+   <div style="display:flex;"><img src="./images/https-5.jpg" alt="" style="display:block;" align="left"/></div>
 
 2. 修改default.conf配置文件
 
