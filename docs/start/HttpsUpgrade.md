@@ -1,6 +1,6 @@
-# 网站https升级
+# 网站https相关
 
-之前，网站是http访问的，鉴于目前主流安全的需求，基本所有网站都已经使用https，那也来尝试下吧。本文介绍如何从阿里云申请证书，然后如何升级服务器配置。
+之前，网站是http访问的，鉴于目前主流安全的需求，基本所有网站都已经使用https，那也来尝试下吧。本文首先介绍如何从阿里云申请证书，然后如何升级服务器配置。
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-## 网站升级
+## 网站http升级
 
 目前由于我们单独部署了主页homepage和博客，所以需要都升级一下。
 
@@ -132,3 +132,44 @@
 https://heyan.site/
 
 https://heyan.site:8001/
+
+<br/>
+
+<br/>
+
+<br/>
+
+<font color="orange" style="font-weight:600;">------ Some update later ------</font>
+
+## Nginx配置https转http
+
+最新由于主页上需要axios调用外部http api接口，ajax限制，不能跨域调用，所以之前的https主页需要改成http的。但考虑到很多地方已经hardcode了https链接，所以希望在nginx配置，将https请求自动转到http上。具体在`conf.d\default.conf`添加如下配置：
+
+``` yaml
+# https server
+server {
+    listen       443 ssl;
+    server_name  heyan.site;
+    ssl_certificate  /etc/nginx/conf.d/cert/3141263_heyan.site.pem;
+    ssl_certificate_key /etc/nginx/conf.d/cert/3141263_heyan.site.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+
+    gzip on;
+    gzip_min_length 1k;
+    gzip_comp_level 9;
+    gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+    gzip_vary on;
+    gzip_disable "MSIE [1-6]\.";
+
+    # redirect to http
+    location / {
+       proxy_pass http://heyan.site;
+    }
+}
+```
+
+
+
