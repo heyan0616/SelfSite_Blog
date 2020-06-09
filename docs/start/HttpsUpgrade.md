@@ -139,7 +139,7 @@ https://heyan.site:8001/
 
 <br/>
 
-<font color="orange" style="font-weight:600;">------ Some update later ------</font>
+<font color="orange" style="font-weight:600;font-size:20px">------ Some updates ------</font>
 
 ## Nginx配置https转http
 
@@ -171,5 +171,53 @@ server {
 }
 ```
 
+<br/>
 
+<br/>
+
+## 非80端口http转https
+
+如果网站是80端口，需要转到https （默认443端口），我们只需要如上面文章中提及的在nginx加上如下配置：
+
+``` yaml
+server {
+    listen 80;
+    server_name heyan.site;
+    rewrite ^(.*)$ https://$host$1 permanent;
+}
+```
+
+但如我的博客网站是`heyan.site:8001`和`heyan.site:8003`,直接使用上面的配置不起作用。这时候我们需要对配置做如下修改。
+
+``` yaml{11,25,26,27,28,29}
+server {
+    listen       443 ssl;
+    server_name  heyan.site;
+    ssl_certificate  /etc/nginx/conf.d/cert/3141263_heyan.site.pem;
+    ssl_certificate_key /etc/nginx/conf.d/cert/3141263_heyan.site.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    # 添加下面这行配置
+    error_page 497 301 https://$http_host$request_uri;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root    /usr/share/nginx/html;
+        index   index.html index.htm;
+    }
+    
+    ... ...
+    
+}
+#注释掉这里的80端口转https的配置
+#server {
+#    listen 80;
+#    server_name heyan.site;
+#    rewrite ^(.*)$ https://$host$1 permanent;
+#}
+```
 
