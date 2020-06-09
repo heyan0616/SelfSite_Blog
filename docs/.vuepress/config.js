@@ -94,14 +94,29 @@ module.exports = {
 					'/start/V2RayWithGoogleCloud',
 				]
 			},
+			// {
+			// 	title: 'Java',
+			// 	collapsable: true,
+			// 	children: [
+			// 		'/Java/JavaBasic/',
+			// 		'/Java/JavaNIO/',
+			// 		'/Java/Java并发/',
+			// 		'/Java/Spring/',
+			// 	]
+			// },
+			// {
+			// 	title: 'Python',
+			// 	collapsable: true,
+			// 	children: [
+			// 		'/Python/'
+			// 	]
+			// },
 			{
-				title: 'Java',
+				title: 'Development Language',
 				collapsable: true,
 				children: [
-					'/Java/JavaBasic/',
-					'/Java/JavaNIO/',
-					'/Java/Java并发/',
-					'/Java/Spring/',
+					'/DevLanguage/Java/',
+					'/DevLanguage/Python/',
 				]
 			},
 			{
@@ -141,16 +156,17 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/DistributedSystem/Theory/',
-					'/DistributedSystem/Zookeeper-Etcd-Related/',
+					'/DistributedSystem/ZookeeperEtcdRelated/',
 					'/DistributedSystem/DistributedMessageStreamPlatform/',
 					'/DistributedSystem/Hadoop/',
 				]
 			},
 			{
-				title: 'Python',
+				title: 'Big Data',
 				collapsable: true,
 				children: [
-					'/Python/'
+					'/BigData/Splunk/',
+					'/BigData/ELK/',
 				]
 			},
 			{
@@ -160,13 +176,6 @@ module.exports = {
 					'/DevOps/Docker/',
 					'/DevOps/Ansible/',
 					'/DevOps/Git/',
-				]
-			},
-			{
-				title: 'Monitor',
-				collapsable: true,
-				children: [
-					'/Monitor/'
 				]
 			},
 			{
@@ -202,69 +211,79 @@ module.exports = {
 			},
 			['/index/', '< 首页'],		
 		],
-		'/Java/':[
+		'/DevLanguage/Java/':[
 			{
 				title: 'Java',
 				collapsable: true,
 				children: [
-					'/Java/',
+					'/DevLanguage/Java/',
 				]
 			},
 			{
 				title: 'Java Basic',
 				collapsable: true,
 				children: [
-					'/Java/JavaBasic/',
-					'/Java/JavaBasic/Java基础-集合1',
-					'/Java/JavaBasic/Java基础-集合2',
-					'/Java/JavaBasic/Java基础-IO流1',
-					'/Java/JavaBasic/Java基础-IO流2',
-					'/Java/JavaBasic/Java基础-反射.md',
-					'/Java/JavaBasic/Java基础-注解.md',
-					'/Java/JavaBasic/Java基础-泛型.md',
-					'/Java/JavaBasic/Java基础-JVM.md',
+					'/DevLanguage/Java/JavaBasic/',
+					'/DevLanguage/Java/JavaBasic/Java基础-集合1',
+					'/DevLanguage/Java/JavaBasic/Java基础-集合2',
+					'/DevLanguage/Java/JavaBasic/Java基础-IO流1',
+					'/DevLanguage/Java/JavaBasic/Java基础-IO流2',
+					'/DevLanguage/Java/JavaBasic/Java基础-反射.md',
+					'/DevLanguage/Java/JavaBasic/Java基础-注解.md',
+					'/DevLanguage/Java/JavaBasic/Java基础-泛型.md',
+					'/DevLanguage/Java/JavaBasic/Java基础-JVM.md',
 				]
 			},
 			{
 				title: 'Java NIO',
 				collapsable: true,
 				children: [
-					'/Java/JavaNIO/',
-					'/Java/JavaNIO/ZeroCopy',
-					'/Java/JavaNIO/Java网络编程.md',
-					'/Java/JavaNIO/JavaBIO.md',
-					'/Java/JavaNIO/JavaNIO-概述.md',
-					'/Java/JavaNIO/JavaNIO-Buffer.md',
-					'/Java/JavaNIO/JavaNIO-Channal.md',
-					'/Java/JavaNIO/JavaNIO-Selector.md',
-					'/Java/JavaNIO/JavaNIO-Path&Files.md',
-					'/Java/JavaNIO/JavaNIO-Samples.md',
-					'/Java/JavaNIO/NIO vs IO.md',
-					'/Java/JavaNIO/IOTheory.md',
-					'/Java/JavaNIO/IOModelAndThreadModel.md',
-					'/Java/JavaNIO/JavaAIO.md',
+					'/DevLanguage/Java/JavaNIO/',
+					'/DevLanguage/Java/JavaNIO/ZeroCopy',
+					'/DevLanguage/Java/JavaNIO/Java网络编程.md',
+					'/DevLanguage/Java/JavaNIO/JavaBIO.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-概述.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-Buffer.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-Channal.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-Selector.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-Path&Files.md',
+					'/DevLanguage/Java/JavaNIO/JavaNIO-Samples.md',
+					'/DevLanguage/Java/JavaNIO/NIO vs IO.md',
+					'/DevLanguage/Java/JavaNIO/IOTheory.md',
+					'/DevLanguage/Java/JavaNIO/IOModelAndThreadModel.md',
+					'/DevLanguage/Java/JavaNIO/JavaAIO.md',
 				]
 			},
 			{
 				title: 'Java 并发',
 				collapsable: true,
 				children: [
-					'/Java/Java并发/',
-					'/Java/Java并发/0-多线程相关.md',
-					'/Java/Java并发/0-什么是线程安全.md',
-					'/Java/Java并发/0-并发相关.md',
-					'/Java/Java并发/0-JMM.md',
+					'/DevLanguage/Java/Java并发/',
+					'/DevLanguage/Java/Java并发/0-多线程相关.md',
+					'/DevLanguage/Java/Java并发/0-什么是线程安全.md',
+					'/DevLanguage/Java/Java并发/0-并发相关.md',
+					'/DevLanguage/Java/Java并发/0-JMM.md',
 				]
 			},
 			{
 				title: 'Spring',
 				collapsable: true,
 				children: [
-					'/Java/Spring/',
-					'/Java/Spring/SpringFramework.md',
-					'/Java/Spring/SpringBoot.md',
-					'/Java/Spring/SpringCloudNetflix.md',
-					'/Java/Spring/SpringCloudAlibaba.md',
+					'/DevLanguage/Java/Spring/',
+					'/DevLanguage/Java/Spring/SpringFramework.md',
+					'/DevLanguage/Java/Spring/SpringBoot.md',
+					'/DevLanguage/Java/Spring/SpringCloudNetflix.md',
+					'/DevLanguage/Java/Spring/SpringCloudAlibaba.md',
+				]
+			},
+			['/index/', '< 首页'],
+		],
+		'/DevLanguage/Python/':[
+			{
+				title: 'Python',
+				collapsable: true,
+				children: [
+					'/DevLanguage/Python/',
 				]
 			},
 			['/index/', '< 首页'],
@@ -384,12 +403,12 @@ module.exports = {
 				title: '分布式协调服务',
 				collapsable: true,
 				children: [
-					'/DistributedSystem/Zookeeper-Etcd-Related/',
-					'/DistributedSystem/Zookeeper-Etcd-Related/zk_1',
-					'/DistributedSystem/Zookeeper-Etcd-Related/zk_2',
-					'/DistributedSystem/Zookeeper-Etcd-Related/zk_3',
-					'/DistributedSystem/Zookeeper-Etcd-Related/zk_4',
-					'/DistributedSystem/Zookeeper-Etcd-Related/zk_vs_etcd',
+					'/DistributedSystem/ZookeeperEtcdRelated/',
+					'/DistributedSystem/ZookeeperEtcdRelated/zk_1',
+					'/DistributedSystem/ZookeeperEtcdRelated/zk_2',
+					'/DistributedSystem/ZookeeperEtcdRelated/zk_3',
+					'/DistributedSystem/ZookeeperEtcdRelated/zk_4',
+					'/DistributedSystem/ZookeeperEtcdRelated/zk_vs_etcd',
 				]
 			},
 			{
@@ -437,6 +456,30 @@ module.exports = {
 					'/DataStorage/neo4j/NorthwindGraph.md',
 				]
 			},			
+			['/index/', '< 首页'],		
+		],
+		'/BigData/':[
+			{
+				title: 'Big Data',
+				collapsable: true,
+				children: [
+					'/BigData/',
+				]
+			},
+			{
+				title: 'Splunk',
+				collapsable: true,
+				children: [
+					'/BigData/Splunk/',
+				]
+			},
+			{
+				title: 'ELK',
+				collapsable: true,
+				children: [
+					'/BigData/ELK/',
+				]
+			},				
 			['/index/', '< 首页'],		
 		],
 		'/SomeKnowledges/':[
