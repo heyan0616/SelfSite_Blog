@@ -14,7 +14,7 @@
 - [CentOS云服务器安装Docker环境](https://heyan.site:8001/start/CentosDockerInstall.html)
 - [发布本地镜像到阿里云服务器](https://heyan.site:8001/start/PushLocalImageToAliyun.html)
 - [网站https相关](https://heyan.site:8001/start/HttpsUpgrade.html)
-- [给Vuepress博客添加Gitalk评论系统](https://heyan.site:8001/start/AddBlogComment.html)
+- [给Vuepress博客添加评论系统](https://heyan.site:8001/start/AddBlogComment.html)
 - [博客部署的一些改进](https://heyan.site:8001/start/BlogDeployment.html)
 - [基于Google Cloud搭建V2Ray服务器](https://heyan.site:8001/start/V2RayWithGoogleCloud.html)
 

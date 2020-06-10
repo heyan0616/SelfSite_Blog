@@ -1,4 +1,4 @@
-# 给Vuepress博客添加Gitalk评论系统
+# 给Vuepress博客添加评论系统
 
 ::: tip 此文为转载 （通常一篇文章会参考多处，也会添加自己的理解，引用地址如有遗漏，请指出）
 
@@ -6,11 +6,11 @@
 
 :::
 
-想给博客添加一个评论系统，当然一种方法是自己去写一个组件，然后添加进来，后续可以尝试；另外一种就是利用现成的插件。这里我们就使用后者，大概搜了下，主流的方法有这三种valine、gitment、gitalk。第一种要单独注册账号，还需要实名认证什么的，就不想弄了；后面两种方法都是基于现有的github issue系统， 这里我参考了上面的文章使用gitalk来加入评论系统。
+想给博客添加一个评论系统，当然一种方法是自己去写一个组件，然后添加进来，后续可以尝试；另外一种就是利用现成的插件。这里我们就使用后者，大概搜了下，主流的方法有这三种valine、gitment、gitalk。后面两种方法都是基于现有的github issue系统， 这里我参考了上面的文章使用gitalk来加入评论系统。
 
 
 
-## **配置步骤**
+## 配置gitalk评论系统
 
 #### 1. 新建一个专门的github仓库，这里我命名为gitalk
 
@@ -167,15 +167,15 @@ module.exports = findMarkdown;
 在github上，我们也可以看到相应的issue被初始化出来：
 
 <div style="display:flex;"><img src="./images/abc-6.jpg" alt="" style="zoom:40%;display:block;" align="left"/></div>
+<br>
+
 （这里的意思貌似需要管理员先登录，初始化出后面的issue才能评论。。有待验证）
 
 <br>
 
 <br>
 
-<br>
-
-<br>
+<font color="orange" style="font-weight:600;font-size:20px">------ update ------</font>
 
 <br>
 
@@ -192,6 +192,102 @@ module.exports = findMarkdown;
 另外，既然我们理解了component组件在vuepress中的应用，按理说我们完全可以自己写一个vue的组件去代替上面的`component.vue`，这就涉及到后台服务和存储，以及如何合理的区分每篇文章，有需要的时候可以尝试！
 
 Good luck！
+
+<br>
+
+<br>
+
+<font color="orange" style="font-weight:600;font-size:20px">------ update ------</font>
+
+<br>
+
+<br>
+
+## 配置Valine评论系统
+
+继续更新此部分内容。经过一段时间，发现基于github的评论系统连接缓慢而且经常出现连接不上的问题（应该跟国内的网络环境有关。，木有办法）。所以尝试了Valine这个系统，发现连接很快，也很简洁。所以在此，就直接替换了。具体步骤如下：
+
+::: tip 参考下面地址
+
+- https://www.cnblogs.com/CoderMonkie/p/blog-comment.html
+
+:::
+
+### 注册leancloud
+
+这部分可以在Valine的官网上找到说明，直接注册，使用开发版即可。
+
+> 这里有个注意的地方就是，leancloud创建应用的时候，提示需要实名认证。此时，只要将页面右上角的版本换成“国际版”，即可跳过此步骤...
+
+创建应用后，获取“**AppID**”和“**AppKey**”
+
+
+
+### 安装npm工具
+
+``` sh
+npm install --save leancloud-storage valine
+```
+
+
+
+### 创建component
+
+创建vue文件`/docs/.vuepress/components/ValineComment.vue`
+
+``` vue
+<template>
+  <div>
+    <hr>
+    <div id="vcomments"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Valine',
+  mounted: function(){
+      // require window 
+      const Valine = require('valine');
+      if (typeof window !== 'undefined') {
+          this.window = window
+          window.AV = require('leancloud-storage') 
+      }
+      new Valine({
+        el: '#vcomments',
+        appId: 'xxxxxxx', //  AppId
+        appKey: 'xxxxxxx', //  AppKey
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'leave your message if you want',
+    });
+  },
+}
+</script>
+```
+
+
+
+### 使用组件
+
+在markdown文件文章的最下面添加上这个组件就可以了， 例如此网站，在`comment.md`文件中使用
+
+``` md
+这里设置了一个单独的页面来提供留言、评论功能，欢迎尝试（ps:使用github账号登录后发表留言）。
+
+关于具体的评论系统的搭建，请参考[给Vuepress博客添加评论系统](https://heyan.site:8001/start/AddBlogComment.html)
+
+<ValineComment />
+```
+
+
+
+### 直接作为vuepress插件使用
+
+> 可参考Valine的官网，里面有详细的介绍。
+>
+> 默认此方法会为每篇文章自动加上评论，然后可以在每个md文件中使用配置控制是否需要评论。有需要的可以尝试~
 
 
 
