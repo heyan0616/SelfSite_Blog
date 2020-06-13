@@ -309,7 +309,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Frontend/Vue/',
-					'/Frontend/Vue/Vue',
+					'/Frontend/Vue/VueStart',
 				]
 			},
 			{
@@ -471,6 +471,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/BigData/Splunk/',
+					'/BigData/Splunk/SplunkStart',
 				]
 			},
 			{

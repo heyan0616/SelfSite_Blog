@@ -10,10 +10,22 @@ $du -hs /path
 
 # sshpass使用 - 需要先安装，具体参考前文
 sshpass -p "xxxxxx" scp -r /xxx/docker_workspace/nginx_blog/html/* root@heyan.site:/home/nginx_blog/html
-
 sshpass -p "xxxxxx" ssh root@heyan.site "rm -rf /home/nginx_blog/html/*"
 
 # 批量修改文件后缀 - 例：批量修改png后缀为jpg
 for i in *.png;do mv "$i" "${i%.png}.jpg" ;done
+
+# 去除重复行
+sort file |uniq
+# 查找非重复行
+sort file |uniq -u
+# 查找重复行
+sort file |uniq -d
+# 统计
+sort file | uniq -c
+# 去除重复的行，并生成新的文件
+sort file |uniq > new_file
+
+# to be added ...
 ```
 
