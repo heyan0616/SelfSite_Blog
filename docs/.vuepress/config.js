@@ -94,23 +94,6 @@ module.exports = {
 					'/start/V2RayWithGoogleCloud',
 				]
 			},
-			// {
-			// 	title: 'Java',
-			// 	collapsable: true,
-			// 	children: [
-			// 		'/Java/JavaBasic/',
-			// 		'/Java/JavaNIO/',
-			// 		'/Java/Java并发/',
-			// 		'/Java/Spring/',
-			// 	]
-			// },
-			// {
-			// 	title: 'Python',
-			// 	collapsable: true,
-			// 	children: [
-			// 		'/Python/'
-			// 	]
-			// },
 			{
 				title: 'Development Language',
 				collapsable: true,
@@ -182,7 +165,7 @@ module.exports = {
 				title: 'Machine Learning',
 				collapsable: true,
 				children: [
-					'/Monitor/'
+					'/MachineLearning/'
 				]
 			},			
 			{

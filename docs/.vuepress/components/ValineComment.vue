@@ -11,10 +11,10 @@ export default {
   mounted: function(){
       // require window 
       const Valine = require('valine');
-      if (typeof window !== 'undefined') {
-          this.window = window
-          window.AV = require('leancloud-storage') 
-      }
+      // if (typeof window !== 'undefined') {
+      //     this.window = window
+      //     window.AV = require('leancloud-storage') 
+      // }
       new Valine({
         el: '#vcomments',
         appId: 'HmqgBlCxKtyXkouKevm0mjSi-MdYXbMMI', // your AppId

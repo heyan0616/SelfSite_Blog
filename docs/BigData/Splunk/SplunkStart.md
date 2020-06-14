@@ -171,6 +171,14 @@ In addition to the three main Splunk processing components, there are some less-
 
 <div style="display:flex;"><img src="./images/splunkstart-9.png" alt="" style="zoom:150%;display:block;" align="left"/></div>
 
+#### Splunk Distributed Search Overall Architecture
+
+<br>
+
+<div style="display:flex;"><img src="./images/splunkstart-17.png" alt="" style="zoom:120%;display:block;" align="left"/></div>
+
+
+
 
 
 ### Splunk 安装

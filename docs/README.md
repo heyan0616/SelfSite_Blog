@@ -43,6 +43,12 @@ footer: © Copyright 2019 Yan - All Rights Reserved
 	    box-sizing: border-box;
 	    border-bottom: 1px solid #389d70;
     }
+    @media only screen and (max-width:720px){
+        .button-link{
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+    }
     .button-link:hover{
     	text-decoration: underline;
     	background-color: #2f845d;
