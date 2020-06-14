@@ -281,7 +281,9 @@
 <div style="height:1px;background-color:#e5e5e5" />
 <br>
 
-- to be added
+- [Splunk Start基础](https://heyan.site:8001/BigData/Splunk/SplunkStart.html)
+
+
 
 ### ELK Stack
 

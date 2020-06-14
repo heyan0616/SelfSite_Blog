@@ -423,3 +423,211 @@ Use dedup to remove duplicates from your results
 > | top cs_username by x_webcat_code_full limit=3
 > ```
 
+#### top Command – Renaming countfield Display
+
+- By default, the display name of the countfield is count
+- countfield=*string* renames the field for display purposes
+
+> *Scenario*:
+>
+> Display the top 3 user/web categories combinations during the last 24 hours. Rename the count field and show count, but not the percentage.
+>
+> ``` sql
+> index=network sourcetype=cisco_wsa_squid
+> | top cs_username x_webcat_code_full limit=3
+> countfield="Total Viewed" showperc=f		--就是修改count的显示名
+> ```
+
+#### rare Command
+
+- The rare command returns the least common field values of a given field in the results
+- Options are identical to the top command
+
+> *Scenario*:
+>
+> Identify which product is the least sold by Buttercup Games vendors over the last 60 minutes.
+>
+> ``` sql
+> index=sales sourcetype=vendor_sales
+> | rare product_name showperc=f limit=1 --显示最新的一条数据
+> ```
+
+#### stats Command
+
+- stats enables you to calculate statistics on data that matches your search criteria
+- Common functions include:
+  - count – returns the number of events that match the search criteria
+  - distinct_count, dc – returns a count of unique values for a given field - sum – returns a sum of numeric values
+  - avg – returns an average of numeric values
+  - list – lists all values of a given field
+  - values – lists unique values of a given field
+
+**stats Command – count**
+
+- count returns the number of matching events based on the current search criteria
+
+> *Scenario*:
+>
+> Count the invalid or failed login attempts during the last 60 minutes.
+>
+> ``` sql
+> index=security sourcetype=linux_secure
+> (invalid OR failed)
+> | stats count
+> ```
+>
+> ``` sql
+> index=security sourcetype=linux_secure
+> (invalid OR failed)
+> | stats count as "Potential Issues"
+> ```
+
+**stats Command – count(*field*)**
+
+- Adding a *field* as an argument to the count function returns the number of events where a value is present for the specified field
+
+> *Scenario*:
+>
+> Count the number of events during the last 15 minutes that contain a vendor action field. Also count the total events.
+>
+> ``` sql
+> index=security sourcetype=linux_secure
+> | stats count(vendor_action) as ActionEvents,
+> count as TotalEvents
+> ```
+
+**stats Command – by *fields***
+
+- by clause returns a count for each value of a named field or set of fields
+
+> *Scenario*:
+>
+> Count the number of events by user, app, and vendor action during the last 15 minutes.
+>
+> ``` sql
+> index=security sourcetype=linux_secure
+> | stats count by user, app, vendor_action --相当于sql的count(1) group by xxx
+> ```
+
+**stats Command – distinct_count(*field*)**
+
+- distinct_count() or dc() provides a count of how many unique values there are for a given field in the result set
+
+> *Scenario*:
+>
+> How many unique websites have employees visited in the last 4 hours?
+>
+> ``` sql
+> index=network sourcetype=cisco_wsa_squid
+> | stats dc(s_hostname) as "Websites visited:"
+> ```
+
+**stats Command – sum(*field*)**
+
+> *Scenario*:
+>
+> How much bandwidth did employees consume at each website during the past week?
+>
+> ``` sql
+> index=network sourcetype=cisco_wsa_squid
+> | stats sum(sc_bytes) as Bandwidth by s_hostname
+> | sort -Bandwidth
+> ```
+
+> *Scenario*:
+>
+> Report the number of retail units sold and sales revenue for each product during the previous week.
+>
+> ``` sql
+> index=sales sourcetype=vendor_sales
+> | stats count(price) as "Units Sold"
+> sum(price) as "Total Sales" by product_name  --相当于sql的 count(),sum() group by xxx
+> | sort -"Total Sales"
+> ```
+
+**stats Command – avg(*field*)**
+
+> *Scenario*:
+>
+> What is the average bandwidth used for each website usage type?
+>
+> ``` sql
+> index=network sourcetype=cisco_wsa_squid
+> | stats avg(sc_bytes) as "Average Bytes" by usage
+> ```
+
+**stats Command – list(*field*)**
+
+- list function lists all field values for a given field
+
+> Which websites has each employee accessed during the last 60 minutes?
+>
+> ``` sql
+> index=network sourcetype=cisco_wsa_squid
+> | stats list(s_hostname) as "Websites visited:"
+>   by cs_username
+> ```
+>
+> <div style="display:flex;"><img src="./images/splunkstart-14.png" alt="" style="zoom:140%;display:block;" align="left"/></div>
+
+**stats Command – values(*field*)**
+
+- values function lists unique values for the specified field
+
+> *Scenario*:
+>
+> Display by IP address the names of users who have failed access attempts in the last 60 minutes.
+>
+> ``` sql
+>  index=security sourcetype=linux_secure fail*
+>  | stats values(user) as "User Names",
+>   count(user) as Attempts by src_ip
+> ```
+>
+> <div style="display:flex;"><img src="./images/splunkstart-15.png" alt="" style="zoom:130%;display:block;" align="left"/></div>
+
+#### Formatting stats Tables
+
+- Tables created with stats commands can be formatted
+- Color code data in each column, based on rules you define
+- Add number formatting (e.g. currency symbols, thousands separators)
+- Can also format data on a per- column basis by clicking the icon above that column (没个列名上的笔一样的图标)
+
+<div style="display:flex;"><img src="./images/splunkstart-16.png" alt="" style="zoom:150%;display:block;" align="left"/></div>
+
+
+
+### Creating Reports and Dashboards
+
+查看原文
+
+### Pivot & Datasets
+
+查看原文
+
+### Creating and Using Lookups
+
+查看原文
+
+### Creating Scheduled Reports and Alerts
+
+查看原文
+
+
+
+
+
+###  Other Resources
+
+- Splunk App Repository
+  - [https://splunkbase.splunk.com/](https://splunkbase.splunk.com/)
+- Splunk Answers
+  - [http://answers.splunk.com/](http://answers.splunk.com/)
+- Splunk Blogs
+  - [http://blogs.splunk.com/](http://blogs.splunk.com/)
+- Splunk Wiki
+  - [http://wiki.splunk.com/](http://wiki.splunk.com/)
+- Splunk Docs
+  - [http://docs.splunk.com/Documentation/Splunk](http://docs.splunk.com/Documentation/Splunk)
+- Splunk User Groups
+  - [http://usergroups.splunk.com/](http://usergroups.splunk.com/)
