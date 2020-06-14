@@ -35,6 +35,10 @@ Splunk作为一款商业软件，市面上学习的文档并不多，主要还�
 
 
 
+具体请看：[官网pdf教程文档](http://heyan.site/download/Splunk%207.x%20Fundamentals%20Part%201%20%28eLearning%29-unlock.pdf)
+
+
+
 ### Splunk 介绍
 
 #### How is Splunk deployed?
@@ -599,19 +603,19 @@ Use dedup to remove duplicates from your results
 
 ### Creating Reports and Dashboards
 
-查看原文
+查看原文 - [官网pdf教程文档](http://heyan.site/download/Splunk%207.x%20Fundamentals%20Part%201%20%28eLearning%29-unlock.pdf)
 
 ### Pivot & Datasets
 
-查看原文
+查看原文 - [官网pdf教程文档](http://heyan.site/download/Splunk%207.x%20Fundamentals%20Part%201%20%28eLearning%29-unlock.pdf)
 
 ### Creating and Using Lookups
 
-查看原文
+查看原文 - [官网pdf教程文档](http://heyan.site/download/Splunk%207.x%20Fundamentals%20Part%201%20%28eLearning%29-unlock.pdf)
 
 ### Creating Scheduled Reports and Alerts
 
-查看原文
+查看原文 - [官网pdf教程文档](http://heyan.site/download/Splunk%207.x%20Fundamentals%20Part%201%20%28eLearning%29-unlock.pdf)
 
 
 
