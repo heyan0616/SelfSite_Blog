@@ -635,3 +635,11 @@ Use dedup to remove duplicates from your results
   - [http://docs.splunk.com/Documentation/Splunk](http://docs.splunk.com/Documentation/Splunk)
 - Splunk User Groups
   - [http://usergroups.splunk.com/](http://usergroups.splunk.com/)
+
+
+
+<style scoped>
+    h4{
+        color: #00578a;
+    }
+</style>
