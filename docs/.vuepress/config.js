@@ -269,6 +269,15 @@ module.exports = {
 					'/DevLanguage/Python/',
 				]
 			},
+			{
+				title: 'Python爬虫',
+				collapsable: true,
+				children: [
+					'/DevLanguage/Python/Spider/',
+					'/DevLanguage/Python/Spider/Requests',
+					'/DevLanguage/Python/Spider/BeautifulSoup',
+				]
+			},
 			['/index/', '< 首页'],
 		],
 		'/Frontend/':[
@@ -474,6 +483,7 @@ module.exports = {
 					'/SomeKnowledges/',
 					'/SomeKnowledges/MacAlert',
 					'/SomeKnowledges/LinuxCommands',
+					'/SomeKnowledges/Markdown',
 				]
 			},
 			['/index/', '< 首页'],		
