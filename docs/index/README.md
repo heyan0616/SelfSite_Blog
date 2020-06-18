@@ -19,6 +19,8 @@
 - [基于Google Cloud搭建V2Ray服务器](https://heyan.site:8001/start/V2RayWithGoogleCloud.html)
 
 
+[comment]: <> (comment)
+
 
 <br>
 
@@ -30,6 +32,8 @@
 - [-> 查看文章索引](https://heyan.site:8001/SomeKnowledges/)
 
 
+[comment]: <> (comment)
+
 
 <br>
 
@@ -40,8 +44,7 @@
 
 ### Java
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 #### Java基础
 
@@ -69,11 +72,9 @@
 
 
 
-
 ### Python
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 #### Python 基础
 
@@ -84,9 +85,10 @@
 - [Python爬虫概述](https://heyan.site:8001/DevLanguage/Python/Spider/)
 - [HTTP请求库 Reuqests](https://heyan.site:8001/DevLanguage/Python/Spider/Requests.html)
 - [解析库 BeautifulSoup](https://heyan.site:8001/DevLanguage/Python/Spider/BeautifulSoup.html)
+- [Scrapy 框架](https://heyan.site:8001/DevLanguage/Python/Spider/Scrapy.html)
 
 
-
+[comment]: <> (comment)
 
 
 <br>
@@ -95,42 +97,39 @@
 
 <div style="height:14px;background-color:#a5d8bc" />
 
-<br>
+### React
 
-## React
-
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - to be added ...
 
 
 
-## Vue
+### Vue
 
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Vue 实例以及生命周期](https://heyan.site:8001/Frontend/Vue/VueStart.html)
+- to be added ...
 
 
 
-## Nodejs
+### Nodejs
 
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - to be added ...
 
 
 
-## Webpack
+### Webpack
 
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - to be added ...
 
 
-
-
-
+[comment]: <> (comment)
 
 
 <br>
@@ -146,17 +145,14 @@
 
 ### Neo4j
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Neo4j基础入门](https://heyan.site:8001/DataStorage/neo4j/Neo4jStart.html)
 - [查询语言Cypher](https://heyan.site:8001/DataStorage/neo4j/Cypher.html)
 - [How to migrate from a relational database to Neo4j](https://heyan.site:8001/DataStorage/neo4j/NorthwindGraph.html)
 
 
-
-
-
+[comment]: <> (comment)
 
 
 <br>
@@ -168,8 +164,7 @@
 
 ### Docker
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Docker - 基本介绍](https://heyan.site:8001/DevOps/Docker/Docker.html)
 - [Docker - 进入容器的方式](https://heyan.site:8001/DevOps/Docker/Docker_Enter.html)
@@ -183,8 +178,7 @@
 
 ### Ansible
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Ansible 入门](https://heyan.site:8001/DevOps/Ansible/AnsibleStart.html)
 
@@ -192,17 +186,13 @@
 
 ### Git
 
-<div style="height:1px;background-color:#e5e5e5" />
-
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Git 常用命令](https://heyan.site:8001/DevOps/Git/GitUsage.html)  - *(持续添加)*
 - [Git Case总结](https://heyan.site:8001/DevOps/Git/GitCase.html) - *(持续添加)*
 
 
-
-
-
+[comment]: <> (comment)
 
 
 <br>
@@ -214,8 +204,7 @@
 
 ### 分布式理论
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [分布式与集群](https://heyan.site:8001/DistributedSystem/DistributedVsCluster.html)
 - [事务、ACID、CAP、一致性、BASE](https://heyan.site:8001/DistributedSystem/ACID-CAP-%E4%B8%80%E8%87%B4%E6%80%A7-BASE.html)
@@ -225,8 +214,7 @@
 
 ### 分布式协调服务
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 #### Zookeeper
 
@@ -241,12 +229,9 @@
 
 
 
-
-
 ### 分布式消息/流平台
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [消息队列相关知识](https://heyan.site:8001/DistributedSystem/DistributedMessageStreamPlatform/MQTheory.html)
 
@@ -256,16 +241,13 @@
 
 #### Pulsar
 
-- ...
-
-
+- to be added ...
 
 
 
 ### 分布式系统基础框架Hadoop
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Hadoop入门](https://heyan.site:8001/DistributedSystem/Hadoop/)
 - [Hadoop安装初体验](https://heyan.site:8001/DistributedSystem/Hadoop/HadoopInstall.html)
@@ -275,7 +257,7 @@
 - [HBase](https://heyan.site:8001/DistributedSystem/Hadoop/hbase.html)
 
 
-
+[comment]: <> (comment)
 
 
 <br>
@@ -287,8 +269,7 @@
 
 ### Splunk
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Splunk Start基础](https://heyan.site:8001/BigData/Splunk/SplunkStart.html)
 
@@ -296,10 +277,10 @@
 
 ### ELK Stack
 
-<div style="height:1px;background-color:#e5e5e5" />
-<br>
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- to be added
+- to be added ...
+
 
 
 
