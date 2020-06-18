@@ -276,6 +276,7 @@ module.exports = {
 					'/DevLanguage/Python/Spider/',
 					'/DevLanguage/Python/Spider/Requests',
 					'/DevLanguage/Python/Spider/BeautifulSoup',
+					'/DevLanguage/Python/Spider/Scrapy',
 				]
 			},
 			['/index/', '< 首页'],
