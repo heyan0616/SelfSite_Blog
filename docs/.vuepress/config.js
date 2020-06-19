@@ -162,10 +162,11 @@ module.exports = {
 				]
 			},
 			{
-				title: 'Machine Learning',
+				title: 'Algorithm & ML',
 				collapsable: true,
 				children: [
-					'/MachineLearning/'
+					'/AMachineLearning/Algorithm/',
+					'/AMachineLearning/MachineLearning/',
 				]
 			},			
 			{
@@ -485,6 +486,30 @@ module.exports = {
 					'/SomeKnowledges/MacAlert',
 					'/SomeKnowledges/LinuxCommands',
 					'/SomeKnowledges/Markdown',
+				]
+			},
+			['/index/', '< 首页'],		
+		],
+		'/AMachineLearning/':[
+			{
+				title: 'Algorithm & Machine Learning',
+				collapsable: true,
+				children: [
+					'/AMachineLearning/',
+				]
+			},
+			{
+				title: 'Algorithm',
+				collapsable: true,
+				children: [
+					'/AMachineLearning/Algorithm/',
+				]
+			},
+			{
+				title: 'Machine Learning',
+				collapsable: true,
+				children: [
+					'/AMachineLearning/MachineLearning/',
 				]
 			},
 			['/index/', '< 首页'],		
