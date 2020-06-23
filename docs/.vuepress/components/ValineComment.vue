@@ -27,3 +27,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+    .vempty{
+        display: none;
+    }
+</style>

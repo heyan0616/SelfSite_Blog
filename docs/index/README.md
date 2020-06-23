@@ -78,14 +78,15 @@
 
 #### Python 基础
 
-- to be added ...
+- [Python 语法](https://heyan.site:8001/DevLanguage/Python/PythonBasic.html)
 
 #### Python 爬虫
 
-- [Python爬虫概述](https://heyan.site:8001/DevLanguage/Python/Spider/)
+- [Python 爬虫概述](https://heyan.site:8001/DevLanguage/Python/Spider/)
 - [HTTP请求库 Reuqests](https://heyan.site:8001/DevLanguage/Python/Spider/Requests.html)
 - [解析库 BeautifulSoup](https://heyan.site:8001/DevLanguage/Python/Spider/BeautifulSoup.html)
 - [Scrapy 框架](https://heyan.site:8001/DevLanguage/Python/Spider/Scrapy.html)
+- [Python 简单爬虫示例](https://heyan.site:8001/DevLanguage/Python/Spider/Cases.html)
 
 
 <!-- comment -->

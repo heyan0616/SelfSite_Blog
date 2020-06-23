@@ -268,16 +268,18 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/DevLanguage/Python/',
+					'/DevLanguage/Python/PythonBasic',
 				]
 			},
 			{
-				title: 'Python爬虫',
+				title: 'Python 爬虫',
 				collapsable: true,
 				children: [
 					'/DevLanguage/Python/Spider/',
 					'/DevLanguage/Python/Spider/Requests',
 					'/DevLanguage/Python/Spider/BeautifulSoup',
 					'/DevLanguage/Python/Spider/Scrapy',
+					'/DevLanguage/Python/Spider/Cases',
 				]
 			},
 			['/index/', '< 首页'],
