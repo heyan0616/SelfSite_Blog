@@ -8,9 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "docs:release": "sh ./builds/release.sh"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "release": "sh ./builds/release.sh"
   },
   "keywords": [],
   "author": "",
