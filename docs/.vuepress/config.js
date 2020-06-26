@@ -269,6 +269,7 @@ module.exports = {
 				children: [
 					'/DevLanguage/Python/',
 					'/DevLanguage/Python/PythonBasic',
+					'/DevLanguage/Python/PythonAdvanced',
 				]
 			},
 			{

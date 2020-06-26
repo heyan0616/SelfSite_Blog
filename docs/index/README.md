@@ -78,7 +78,8 @@
 
 #### Python 基础
 
-- [Python 语法](https://heyan.site:8001/DevLanguage/Python/PythonBasic.html)
+- [Python 基础](https://heyan.site:8001/DevLanguage/Python/PythonBasic.html)
+- [Python 进阶](https://heyan.site:8001/DevLanguage/Python/PythonAdvanced.html)
 
 #### Python 爬虫
 
