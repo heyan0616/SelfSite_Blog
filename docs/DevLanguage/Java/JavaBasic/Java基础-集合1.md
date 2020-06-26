@@ -911,37 +911,55 @@ public class Test {
 **1**. Collection:collection为所以集合的定级接口，继承了Iterable类，表明所有集合类都是可迭代的。
 
 <div style="display:flex;"><img src="./images/javacollection-1-4.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **2**. List: 实现了Collection接口，存储的数据是有序的、可重复的，可通过索引进行元素访问。
 
 <div style="display:flex;"><img src="./images/javacollection-1-5.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **3**. ArrayList:底层实现为数组，线程不安全，查找效率高，增删效率低。
 
 <div style="display:flex;"><img src="./images/javacollection-1-6.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **4**. Vector:由下图可知vector和ArrayList实现原理相同，但是vector是线程安全的(synchronized)，效率略低于ArrayList。
 
 <div style="display:flex;"><img src="./images/javacollection-1-7.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **5**. Stack:继承Vector，是一个先进后出的栈。
 
 <div style="display:flex;"><img src="./images/javacollection-1-8.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **6**. LinkedList:底层实现为双向链表，进行元素的增删效率高，查询效率低。
 
 <div style="display:flex;"><img src="./images/javacollection-1-9.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **7**. Queue:队列，先进先出(FIFO)
 
 <div style="display:flex;"><img src="./images/javacollection-1-10.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **8**. Set:存储的元素是无序的、唯一的。在程序运行中，如果使用add添加一个已经存在的元素，将返回false。
 
 <div style="display:flex;"><img src="./images/javacollection-1-11.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 **9**. HashSet:底层实现为哈希表(链表+数组)，线程不安全，查找效率高，增删效率低，通过元素的hashCode和equels方法保证了元素的唯一性。
 
 <div style="display:flex;"><img src="./images/javacollection-1-12.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
 <div style="display:flex;"><img src="./images/javacollection-1-13.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
 上图为HashSet底层实现模式哈希表(数组+链表)，当一条链上元素超过8个以上后，会自动转换为红黑树来存储元素，提高查询效率。
 
-**11**. TreeSet:底层实现为二叉树，线程不安全，可对元素进行自动排序，保证元素唯一性的方式是compareTo方法返回0。
+**10**. TreeSet:底层实现为二叉树，线程不安全，可对元素进行自动排序，保证元素唯一性的方式是compareTo方法返回0。
 
 <div style="display:flex;"><img src="./images/javacollection-1-14.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
-**12**. LinkedHashSet:底层实现为链表和哈希表，线程不安全，存储的元素时有序的、唯一的，通过元素的hashCode和equels方法保证了元素的唯一性。
+<be>
+
+**11**. LinkedHashSet:底层实现为链表和哈希表，线程不安全，存储的元素时有序的、唯一的，通过元素的hashCode和equels方法保证了元素的唯一性。
 
 <div style="display:flex;"><img src="./images/javacollection-1-15.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
 Arrays：类Arrays为集合的工具类，可使用该类的方法对集合进行排序、转换为list等操作。
