@@ -40,6 +40,8 @@
 为了促进计算机网络的发展，国际标准化组织ISO于1977年成立了一个委员会，在现有网络的基础上，提出了不基于具体机型、操作系统或公司的网络体系结构，称为开放系统互连参考模型，即OSI/RM (Open System Interconnection Reference Model)。OSI模型把网络通信的工作分为7层，分别是物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。
 
 <div style="display:flex;"><img src="./images/socket-2.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 ### **OSI模型层次功能**
 
 - **物理层**
@@ -144,6 +146,8 @@ TCP报文段包括协议首部和数据两部分，协议首部的固定部分�
 TCP是面向连接的协议，因此每个TCP连接都有3个阶段：连接建立、数据传送和连接释放。连接建立经历三个步骤，通常称为“三次握手”。TCP三次握手过程如下：
 
 <div style="display:flex;"><img src="./images/socket-6.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+<br>
+
 由于TCP连接是全双工的，因此每个方向都必须单独进行关闭。这原则是当一方完成它的数据发送任务后就能发送一个FIN来终止这个方向的连接。收到一个 FIN只意味着这一方向上没有数据流动，一个TCP连接在收到一个FIN后仍能发送数据。首先进行关闭的一方将执行主动关闭，而另一方执行被动关闭。
 
 1. TCP客户端发送一个FIN，用来关闭客户到服务器的数据传送。
@@ -162,6 +166,8 @@ UDP，用户数据报协议，英文全称是User Datagram Protocol，它是TCP/
 - UDP协议格式
 
 <div style="display:flex;"><img src="./images/socket-7.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+<br>
+
 从图中可以看到，UDP协议十分简单，它由两部分组成：首部和数据。其中，首部仅有8个字节，包括源端口和目的端口，长度（UDP用于数据报的长度）、校验和。
 
 ### HTTP协议
@@ -184,14 +190,22 @@ HTTP请求报文由请求行、首部行和实体主体组成，由浏览器发�
 <div style="display:flex;"><img src="./images/socket-9.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
 上面这张图是HTTP响应报文，它由状态行、首部行和实体主体组成。下面两张图是在谷歌浏览器内访问服务器查看的HTTP请求和响应。
 
+<br>
+
 <div style="display:flex;"><img src="./images/socket-10.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
 <div style="display:flex;"><img src="./images/socket-11.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+<br>
+
 - HTTP请求方法和响应状态码
 
 在上面的HTTP请求报文例子中，我们可以看到请求方法是GET，这表示请求读取由URL所标志的信息，除了GET，还有其它几种常用的方法。
 
 <div style="display:flex;"><img src="./images/socket-12.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
+<br>
+
 在HTTP响应报文的例子中，我们可以看到状态码是200，表示响应成功。下表是其它状态码，总共5大类，33种。
+
+<br>
 
 <div style="display:flex;"><img src="./images/socket-13.jpg" alt="" style="zoom:100%;display:block;" align="left"/></div>
 

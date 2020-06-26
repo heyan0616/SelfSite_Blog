@@ -104,6 +104,8 @@ bufferFull()方法扫描缓冲区，但必须保持在bufferFull（）方法被�
 如果缓冲区已满，它可以被处理。如果它不满，并且在你的实际案例中有意义，你或许能处理其中的部分数据。但是许多情况下并非如此。下图展示了“缓冲区数据循环就绪”： 
 
 <div style="display:flex;"><img src="./images/niovsio-2.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 ## **总结** 
 
 NIO可让您只使用一个（或几个）单线程管理多个通道（网络连接或文件），但付出的代价是解析数据可能会比从一个阻塞流中读取数据更复杂。 
@@ -111,6 +113,8 @@ NIO可让您只使用一个（或几个）单线程管理多个通道（网络�
 如果需要管理同时打开的成千上万个连接，这些连接每次只是发送少量的数据，例如聊天服务器，实现NIO的服务器可能是一个优势。同样，如果你需要维持许多打开的连接到其他计算机上，如P2P网络中，使用一个单独的线程来管理你所有出站连接，可能是一个优势。一个线程多个连接的设计方案如下图所示：
 
 <div style="display:flex;"><img src="./images/niovsio-3.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+<br>
+
 如果你有少量的连接使用非常高的带宽，一次发送大量的数据，也许典型的IO服务器实现可能非常契合。下图说明了一个典型的IO服务器设计：
 
 <div style="display:flex;"><img src="./images/niovsio-4.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
