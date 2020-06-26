@@ -29,6 +29,6 @@ export default {
 </script>
 <style scoped>
     .vempty{
-        display: none;
+        display: none !important;
     }
 </style>
