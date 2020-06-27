@@ -1,56 +1,10 @@
 # Python 基础
 
+::: tip 此文为转载 （通常一篇文章会参考多处，也会添加自己的理解，引用地址如有遗漏，请指出）
 
+- [https://www.liaoxuefeng.com/wiki/1016959663602400](https://www.liaoxuefeng.com/wiki/1016959663602400)
 
-## 装饰器
+:::
 
-``` python
-###简单的装饰器###
-def func1():
-    print ('this is a good man')
-
-def outer(func):
-    def inner():
-        print ('*****************')
-        func()
-    return inner()
-
-# f 就是函数func1的加强版本
-f = outer(func1)
-#f()
-
-#------------------------------------------
-
-###复杂一点的装饰器###
-def outer(func):
-    def inner(age):
-        if age < 0:
-            age = 0
-        func(age)
-    return inner
-
-#使用@符号将装饰器应用到函数
-@outer      #相当于say=outer(say)
-def say(age):
-    print ('i am %d years old' % (age))
-
-say(-10)
-
-#------------------------------------------
-
-###通用一点的装饰器###
-
-def outer(func):
-    def inner(*args, **kwargs):
-        # 添加修饰的功能
-        print ('&&&&&&&&&&&&&&&&&&')
-        func(*args, **kwargs)
-    return inner
-
-@outer
-def say(name, age): #函数参数理论上无限制，实际最好不超过六到七个
-    print ('may name is %s, i am %d years old' % (name, age))
-
-say ('hello', 18)
-```
+Python3基础教程可以参考上面的链接（廖雪峰的教程）。
 
