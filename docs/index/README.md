@@ -42,6 +42,8 @@
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
 
+
+
 ### Java
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
@@ -98,6 +100,9 @@
 ## Frontend
 
 <div style="height:14px;background-color:#a5d8bc" />
+<br>
+
+
 
 ### React
 
@@ -135,6 +140,25 @@
 
 <br>
 
+## Architect
+
+<div style="height:14px;background-color:#a5d8bc" />
+<br>
+
+
+
+### 负载均衡
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [负载均衡相关知识](https://heyan.site:8001/Architect/LoadBalance.html)
+
+
+<!-- comment -->
+
+
+<br>
+
 ## Data Storage
 
 <div style="height:14px;background-color:#a5d8bc" />
@@ -162,6 +186,8 @@
 
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
+
+
 
 ### Docker
 
@@ -203,13 +229,15 @@
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
 
+
+
 ### 分布式理论
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [分布式与集群](https://heyan.site:8001/DistributedSystem/DistributedVsCluster.html)
-- [事务、ACID、CAP、一致性、BASE](https://heyan.site:8001/DistributedSystem/ACID-CAP-%E4%B8%80%E8%87%B4%E6%80%A7-BASE.html)
-- [一致性算法(2PC、3PC、Paxos、Raft、ZAB ...)](https://heyan.site:8001/DistributedSystem/ConsistencyAlgorithm.html)
+- [分布式与集群](https://heyan.site:8001/DistributedSystem/Theory/DistributedVsCluster.html)
+- [事务、ACID、CAP、一致性、BASE](https://heyan.site:8001/DistributedSystem/Theory/ACID-CAP-%E4%B8%80%E8%87%B4%E6%80%A7-BASE.html)
+- [一致性算法(2PC、3PC、Paxos、Raft、ZAB ...)](https://heyan.site:8001/DistributedSystem/Theory/ConsistencyAlgorithm.html)
 
 
 
@@ -268,6 +296,8 @@
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
 
+
+
 ### Splunk
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
@@ -292,6 +322,8 @@
 
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
+
+
 
 ### Algorithm
 
