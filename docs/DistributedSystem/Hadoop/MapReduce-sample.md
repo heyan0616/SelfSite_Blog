@@ -19,7 +19,8 @@ MapReduce执行流程图
 
 详细图解如下
 
-<div style="display:flex;"><img src="./images/mr-sample-2.jpg" alt="" style="display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-sample-2.png" alt="" style="display:block;" align="left"/></div>
+
 <br>
 
 > maptask通过自带的TextInputFormat将数据按照一行一行的读取 , 用每一行的起始偏移量作为k , 每行的内容作为value构成<k1,v1>键值对 , 在map中经过业务逻辑 , 对数据进行的"分" , 形成新的键值对<k2,v2>传递给reduce ; reduce将传递过来的键值对按照字典序排序分组 , 然后经过业务逻辑形成新的<k3,v3>键值对 , 通过自带的TextOutputFormat进行"合" , 最后存储结果
@@ -54,7 +55,8 @@ MapReduce执行流程图
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-sample-4.jpg" alt="" style="display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-sample-4.png" alt="" style="display:block;" align="left"/></div>
+
 <br>
 
 1. 将目标文件按照一定的规则进行逻辑分块 , 一般分块的大小等于block大小128M (分区注意事项就是数据不能重复 , 不能遗漏) , 有多少个切片最终就启动多少个maptask
@@ -556,7 +558,7 @@ public class FlowSortCountDriver {
 
 <br>
 
-<div style="display:flex;"><img src="./images/mr-sample-6.jpg" alt="" style="display:block;" align="left"/></div>
+<div style="display:flex;"><img src="./images/mr-sample-6.png" alt="" style="display:block;" align="left"/></div>
 
 <br>
 
