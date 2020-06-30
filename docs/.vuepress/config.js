@@ -314,6 +314,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Frontend/Nodejs/',
+					'/Frontend/Nodejs/npm',
 					'/Frontend/Nodejs/Nodejs',
 				]
 			},
