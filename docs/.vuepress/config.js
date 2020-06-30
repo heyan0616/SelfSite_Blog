@@ -100,15 +100,18 @@ module.exports = {
 				children: [
 					'/DevLanguage/Java/',
 					'/DevLanguage/Python/',
+					'/DevLanguage/JavaScript/',
 				]
 			},
 			{
 				title: 'Frontend',
 				collapsable: true,
 				children: [
+					'/Frontend/HtmlCss/',
+					'/Frontend/JavaScript/',
+					'/Frontend/Nodejs/',
 					'/Frontend/React/',
 					'/Frontend/Vue/',
-					'/Frontend/Nodejs/',
 					'/Frontend/Webpack/',
 				]
 			},
@@ -285,12 +288,45 @@ module.exports = {
 			},
 			['/index/', '< 首页'],
 		],
+		'/DevLanguage/JavaScript/':[
+			{
+				title: 'JavaScript',
+				collapsable: true,
+				children: [
+					'/DevLanguage/JavaScript/',
+				]
+			},
+			['/index/', '< 首页'],
+		],
 		'/Frontend/':[
 			{
 				title: '前端',
 				collapsable: true,
 				children: [
 					'/Frontend/',
+				]
+			},
+			{
+				title: 'Html & CSS',
+				collapsable: true,
+				children: [
+					'/Frontend/HtmlCss/',
+				]
+			},
+			{
+				title: 'JavaScript',
+				collapsable: true,
+				children: [
+					'/Frontend/JavaScript/',
+				]
+			},
+			{
+				title: 'Nodejs',
+				collapsable: true,
+				children: [
+					'/Frontend/Nodejs/',
+					'/Frontend/Nodejs/npm',
+					'/Frontend/Nodejs/Nodejs',
 				]
 			},
 			{
@@ -307,15 +343,6 @@ module.exports = {
 				children: [
 					'/Frontend/Vue/',
 					'/Frontend/Vue/VueStart',
-				]
-			},
-			{
-				title: 'Nodejs',
-				collapsable: true,
-				children: [
-					'/Frontend/Nodejs/',
-					'/Frontend/Nodejs/npm',
-					'/Frontend/Nodejs/Nodejs',
 				]
 			},
 			{
