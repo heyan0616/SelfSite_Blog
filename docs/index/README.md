@@ -173,12 +173,20 @@
 
 
 
-### 负载均衡
+### Load Balance
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [负载均衡相关知识](https://heyan.site:8001/Architect/LoadBalance.html)
 
+
+
+### Servers Related
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [Nginx 从入门到实践](https://heyan.site:8001/Architect/Servers/nginx.html)
+- to be added ...
 
 <!-- comment -->
 
