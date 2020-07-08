@@ -119,7 +119,8 @@ module.exports = {
 				title: 'Architect',
 				collapsable: true,
 				children: [
-					'/Architect/LoadBalance'
+					'/Architect/LoadBalance',
+					'/Architect/Servers/',
 				]
 			},
 			{
@@ -402,6 +403,14 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Architect/LoadBalance.md',
+				]
+			},
+			{
+				title: '服务器专题',
+				collapsable: true,
+				children: [
+					'/Architect/Servers/',
+					'/Architect/Servers/nginx',
 				]
 			},
 			['/index/', '< 首页'],		
