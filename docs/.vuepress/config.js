@@ -513,6 +513,10 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/BigData/ELK/',
+					'/BigData/ELK/ESConcepts-base',
+					'/BigData/ELK/ESConcepts-index',
+					'/BigData/ELK/ESConcepts-cluster',
+					'/BigData/ELK/ESUsage',
 				]
 			},				
 			['/index/', '< 首页'],		

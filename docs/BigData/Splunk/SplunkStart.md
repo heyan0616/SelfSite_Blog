@@ -1,7 +1,7 @@
 # Splunk Start
 
 ::: tip 官网Trainning
-https://www.splunk.com/en_us/training.html
+- https://www.splunk.com/en_us/training.html
 :::
 
 Splunk作为一款商业软件，市面上学习的文档并不多，主要还是靠官方的learning课程。所以本文旨在根据官网的学习视频/文档，梳理并翻译知识要点。
