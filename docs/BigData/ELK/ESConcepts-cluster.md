@@ -1,4 +1,4 @@
-# Elasticsearch 分布式特性
+# Elasticsearch 原理-分布式特性
 
 ::: tip 转载参考
 

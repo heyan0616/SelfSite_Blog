@@ -1,4 +1,4 @@
-# Elasticsearch 索引
+# Elasticsearch 原理-索引
 
 
 
@@ -146,7 +146,7 @@ ES 的解决方法就是：**用更多的索引**。什么意思？就是原来�
 
 ::: tip 转载
 
-- [Elasticsearch－基础介绍及索引原理分析](https://www.cnblogs.com/dreamroute/p/8484457.html) 
+- [Elasticsearch－基础介绍及索引原理分析](https://www.jb51.net/article/166091.htm) 
 
 :::
 

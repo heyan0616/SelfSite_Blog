@@ -514,8 +514,11 @@ module.exports = {
 				children: [
 					'/BigData/ELK/',
 					'/BigData/ELK/ESConcepts-base',
-					'/BigData/ELK/ESConcepts-index',
 					'/BigData/ELK/ESConcepts-cluster',
+					'/BigData/ELK/ESConcepts-index',
+					'/BigData/ELK/ESConcepts-mapping',
+					'/BigData/ELK/ES-IndexTemplate',
+					'/BigData/ELK/ES-TextAnalysis',
 					'/BigData/ELK/ESUsage',
 				]
 			},				
