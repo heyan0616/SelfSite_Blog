@@ -1,4 +1,4 @@
-# Elasticsearch 概念与总结
+# ES 概念与总结
 
 ::: tip 官网参考部分
 

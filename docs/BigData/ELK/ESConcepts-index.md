@@ -1,4 +1,4 @@
-# Elasticsearch 原理-索引
+# ES 原理-倒排索引
 
 
 

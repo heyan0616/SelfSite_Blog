@@ -1,4 +1,4 @@
-# Elasticsearch Index-Mapping|Setting
+# ES Index-Mapping & Setting
 
 ## ES Mapping
 

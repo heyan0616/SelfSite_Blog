@@ -1,12 +1,12 @@
-# Elasticsearch Index-Index Template 
+# ES Index-Index Template 
 
-::: tip 转载
+## Elasticsearch: Index template
+
+::: tip 转载1
 
 - [Elasticsearch: Index template](https://www.cnblogs.com/sanduzxcvbnm/p/12085103.html) 
 
 :::
-
-## Elasticsearch: Index template
 
 Index template定义在创建新index时可以自动应用的settings和mappings。 Elasticsearch根据与index名称匹配的index模式将模板应用于新索引。这个对于我们想创建的一系列的Index具有同样的settings及mappings很有帮助。比如我们希望每一天/月的日志的index都具有同样的设置。
 
@@ -340,13 +340,19 @@ DELETE _template/template_2
 
 <br>
 
-::: tip 转载
+<hr>
+
+<br>
+
+
+
+## 初探 Elasticsearch Index Template（索引模板)
+
+::: tip 转载2
 
 - [初探 Elasticsearch Index Template（索引模板)](https://www.jianshu.com/p/1f67e4436c37) 
 
 :::
-
-## 初探 Elasticsearch Index Template（索引模板)
 
 典型使用结构如下所示：
 
@@ -805,17 +811,21 @@ POST /_aliases
 
 <br>
 
+<hr>
+
+<br>
 
 
-::: tip 转载
-
-- [**Index Template 和 Dynamic Template**](https://www.yuque.com/xiongsanxiansheng/qfvqxo/llgddg) 
-
-:::
 
 集群上的索引会随着时间越来越多，例如，会为你的日志每天创建一个索引。使用多个素银可以更好的管理数据，提高性能，例如：logs-2019-05-01、logs-2019-05-02。
 
 ## **Index Template 和 Dynamic Template**
+
+::: tip 转载3
+
+- [**Index Template 和 Dynamic Template**](https://www.yuque.com/xiongsanxiansheng/qfvqxo/llgddg) 
+
+:::
 
 ### **1. Index Template**
 

@@ -347,9 +347,12 @@
 - [Elasticsearch 概念与总结](https://heyan.site:8001/BigData/ELK/ESConcepts-base.html)
 - [Elasticsearch 原理-分布式特性](https://heyan.site:8001/BigData/ELK/ESConcepts-cluster.html)
 - [Elasticsearch 原理-索引](https://heyan.site:8001/BigData/ELK/ESConcepts-index.html)
-- [Elasticsearch Index-Mapping|Setting](https://heyan.site:8001/BigData/ELK/ESConcepts-mapping.html)
-- [Elasticsearch Index-Index Template](https://heyan.site:8001/BigData/ELK/ES-IndexTemplate.html)
-- [Elasticsearch Index-Text Analysis](https://heyan.site:8001/BigData/ELK/ES-TextAnalysis.html)
+- [Elasticsearch 原理-分词器 & 搜索相关性](https://heyan.site:8001/BigData/ELK/ESConcepts-AnalysisAndRelated.html)
+- [Elasticsearch Index-基本操作与并发](https://heyan.site:8001/BigData/ELK/ESIndex-basicoperation.html)
+- [Elasticsearch Index-Mapping|Setting](https://heyan.site:8001/BigData/ELK/ESIndex-mapping.html)
+- [Elasticsearch Index-Index Template](https://heyan.site:8001/BigData/ELK/ESIndex-IndexTemplate.html)
+- [Elasticsearch Index-Text Analysis](https://heyan.site:8001/BigData/ELK/ESIndex-TextAnalysis.html)
+- [Elasticsearch Index-Ingest|Script](https://heyan.site:8001/BigData/ELK/ESIndex-IngestAndScript.html)
 - [Elasticsearch 基本使用](https://heyan.site:8001/BigData/ELK/ESUsage.html)
 - to be added ...
 
