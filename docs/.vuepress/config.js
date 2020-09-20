@@ -522,7 +522,8 @@ module.exports = {
 					'/BigData/ELK/ESIndex-IndexTemplate',
 					'/BigData/ELK/ESIndex-TextAnalysis',
 					'/BigData/ELK/ESIndex-IngestAndScript',
-					'/BigData/ELK/ESUsage',
+					'/BigData/ELK/ESUsage-crud',
+					'/BigData/ELK/ESSearch-search',
 				]
 			},				
 			['/index/', '< 首页'],		

@@ -286,6 +286,50 @@ CopyPUT /mapping_test/_doc/1
 
 
 
+**官网的”index modules“章节，就是针对index相关的各种维度的设置。**
+
+Index Modules are modules created per index and control all aspects related to an index.
+
+### Index Settings
+
+Index level settings can be set per-index. Settings may be:
+
+- **static**
+  - They can only be set at index creation time or on a [closed index](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/indices-open-close.html).
+- **dynamic**
+  - They can be changed on a live index using the [update-index-settings](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/indices-update-settings.html) API.
+
+>  Changing static or dynamic index settings on a closed index could result in incorrect settings that are impossible to rectify without deleting and recreating the index.
+
+#### [Static index settings](https://github.com/elastic/elasticsearch/edit/7.9/docs/reference/index-modules.asciidoc)
+
+#### [Dynamic index settings](https://github.com/elastic/elasticsearch/edit/7.9/docs/reference/index-modules.asciidoc)
+
+### Settings in other index modules
+
+Other index settings are available in index modules:
+
+- **[Analysis](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/analysis.html)**
+  - Settings to define analyzers, tokenizers, token filters and character filters.
+- **[Index shard allocation](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-allocation.html)**
+  - Control over where, when, and how shards are allocated to nodes.
+- **[Mapping](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-mapper.html)**
+  - Enable or disable dynamic mapping for an index.
+- **[Merging](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-merge.html)**
+  - Control over how shards are merged by the background merge process.
+- **[Similarities](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-similarity.html)**
+  - Configure custom similarity settings to customize how search results are scored.
+- **[Slowlog](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-slowlog.html)**
+  - Control over how slow queries and fetch requests are logged.
+- **[Store](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-store.html)**
+  - Configure the type of filesystem used to access shard data.
+- **[Translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-translog.html)**
+  - Control over the transaction log and background flush operations.
+- **[History retention](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-history-retention.html)**
+  - Control over the retention of a history of operations in the index.
+- **[Indexing pressure](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-modules-indexing-pressure.html)**
+  - Configure indexing back pressure limits.
+
 
 
 
