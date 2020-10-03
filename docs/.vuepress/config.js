@@ -172,6 +172,13 @@ module.exports = {
 					'/AMachineLearning/Algorithm/',
 					'/AMachineLearning/MachineLearning/',
 				]
+			},	
+			{
+				title: 'Computer Science',
+				collapsable: true,
+				children: [
+					'/ComputerScience/Network/',
+				]
 			},			
 			{
 				title: 'Some Knowledges',
@@ -524,6 +531,8 @@ module.exports = {
 					'/BigData/ELK/ESIndex-IngestAndScript',
 					'/BigData/ELK/ESUsage-crud',
 					'/BigData/ELK/ESSearch-search',
+					'/BigData/ELK/ESSearch-queryDSL',
+					'/BigData/ELK/ESSearch-aggregation',
 				]
 			},				
 			['/index/', '< 首页'],		
@@ -561,6 +570,25 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/AMachineLearning/MachineLearning/',
+				]
+			},
+			['/index/', '< 首页'],		
+		],
+		'/ComputerScience/':[
+			{
+				title: 'Computer Science',
+				collapsable: true,
+				children: [
+					'/ComputerScience/',
+				]
+			},
+			{
+				title: 'Network',
+				collapsable: true,
+				children: [
+					'/ComputerScience/Network/',
+					'/ComputerScience/Network/NetworkTerms',
+					'/ComputerScience/Network/NetworkBase',
 				]
 			},
 			['/index/', '< 首页'],		
