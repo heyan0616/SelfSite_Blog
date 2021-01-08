@@ -7,13 +7,13 @@
 
 ## 申请Google Cloud的VPS
 
-### 前提条件
+### ▎前提条件
 
 - 你先能上google云，请自行解决... 不在本文讨论范围
 - 拥有或创建google账号
 - 有一张VISA信用卡（4开头的，开通google cloud需要用到）
 
-### 注册 Google Cloud
+### ▎注册 Google Cloud
 
 登录https://cloud.google.com/，点击“**免费开始使用**”，使用自己的google账号登录，地区选择“**香港**”，详细地址随便写个就行，输入你的信用卡，google会先扣除一定额度的money（很快就会退回来）。
 
@@ -22,7 +22,7 @@
 <div style="display:flex;"><img src="./images/vwgc-1.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
-### 创建VPS instance
+### ▎创建VPS instance
 
 #### "Compute Engine"->"VM instance"
 
@@ -74,7 +74,7 @@
 <div style="display:flex;"><img src="./images/vwgc-7.jpg" alt="Home.vue" style="display:block;" align="left"/></div>
 <br>
 
-### SSH登录设置
+### ▎SSH登录设置
 
 至此，我们的instance就申请成功了。下面我们配置V2Ray服务。
 

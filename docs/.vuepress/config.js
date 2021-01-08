@@ -120,6 +120,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Architect/LoadBalance',
+					'/Architect/Serverless/',
 					'/Architect/Servers/',
 				]
 			},
@@ -227,6 +228,7 @@ module.exports = {
 					'/DevLanguage/Java/JavaBasic/Java基础-注解.md',
 					'/DevLanguage/Java/JavaBasic/Java基础-泛型.md',
 					'/DevLanguage/Java/JavaBasic/Java基础-JVM.md',
+					'/DevLanguage/Java/JavaBasic/Java基础-JDBC',
 				]
 			},
 			{
@@ -410,6 +412,14 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Architect/LoadBalance.md',
+				]
+			},
+			{
+				title: 'Serverless 架构',
+				collapsable: true,
+				children: [
+					'/Architect/Serverless/',
+					'/Architect/Serverless/ServerlessBase',
 				]
 			},
 			{

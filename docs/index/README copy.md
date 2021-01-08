@@ -56,7 +56,6 @@
 - [Java基础-IO流1](/DevLanguage/Java/JavaBasic/Java基础-IO流1.html)
 - [Java基础-IO流2](/DevLanguage/Java/JavaBasic/Java基础-IO流2.html)
 - ... 
-- [Java基础-JDBC与连接池](/DevLanguage/Java/JavaBasic/Java基础-JDBC.html)
 
 #### JavaNIO
 
@@ -216,7 +215,6 @@
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [图数据库](/DataStorage/neo4j/GraphDatabase.html)
 - [Neo4j基础入门](/DataStorage/neo4j/Neo4jStart.html)
 - [查询语言Cypher](/DataStorage/neo4j/Cypher.html)
 - [How to migrate from a relational database to Neo4j](/DataStorage/neo4j/NorthwindGraph.html)
