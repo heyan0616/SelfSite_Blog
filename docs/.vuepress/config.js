@@ -267,8 +267,11 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/DevLanguage/Java/Spring/',
-					'/DevLanguage/Java/Spring/SpringFramework.md',
+					'/DevLanguage/Java/Spring/SpringFramework1.md',
+					'/DevLanguage/Java/Spring/SpringFramework2.md',
+					'/DevLanguage/Java/Spring/SpringFramework3.md',
 					'/DevLanguage/Java/Spring/SpringBoot.md',
+					'/DevLanguage/Java/Spring/SpringBoot2.md',
 					'/DevLanguage/Java/Spring/SpringCloudNetflix.md',
 					'/DevLanguage/Java/Spring/SpringCloudAlibaba.md',
 				]
@@ -427,6 +430,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/Architect/Servers/',
+					'/Architect/Servers/Servers',
 					'/Architect/Servers/nginx',
 				]
 			},
@@ -497,14 +501,14 @@ module.exports = {
 				]
 			},
 			{
-				title: 'Neo4j',
+				title: 'Graph Database',
 				collapsable: true,
 				children: [
-					'/DataStorage/neo4j/',
-					'/DataStorage/neo4j/GraphDatabase',
-					'/DataStorage/neo4j/Neo4jStart.md',
-					'/DataStorage/neo4j/Cypher.md',
-					'/DataStorage/neo4j/NorthwindGraph.md',
+					'/DataStorage/graph/',
+					'/DataStorage/graph/GraphDatabase',
+					'/DataStorage/graph/Neo4jStart.md',
+					'/DataStorage/graph/Cypher.md',
+					'/DataStorage/graph/NorthwindGraph.md',
 				]
 			},			
 			['/index/', '< 首页'],		
