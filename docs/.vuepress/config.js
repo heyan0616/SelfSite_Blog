@@ -129,7 +129,7 @@ module.exports = {
 				collapsable: true,
 				children: [
 					'/DataStorage/Overview',
-					'/DataStorage/neo4j/',
+					'/DataStorage/graph/',
 				]
 			},
 			{

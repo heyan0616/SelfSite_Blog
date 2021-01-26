@@ -1,4 +1,4 @@
-# Neo4j
+# Graph Database
 
 文章列表
 
