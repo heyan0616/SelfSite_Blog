@@ -10,7 +10,7 @@
 
 :::
 
-## Spring Boot 热部署
+## Spring Boot热部署
 
 在目前的 Spring Boot 项目中，当发生了任何修改之后我们都需要重新启动才能够正确的得到效果，非常麻烦，Spring Boot 提供了热部署的方式，当发现任何类发生了改变，就会通过 JVM 类加载的方式，加载最新的类到虚拟机中，这样就不需要重新启动也能看到修改后的效果了。
 
@@ -52,7 +52,7 @@
    </build>
    ```
 
-## 使用自定义 Banner
+## 使用自定义Banner
 
 **提示：** banner.txt 必须是 ANSI 编码的，一般工具创建会是 UTF-8，会显示不出来
 
@@ -413,7 +413,7 @@ http://地址:端口/应用名/swagger-ui.html
 
 
 
-## Spring Boot 常见问题
+## Spring Boot常见问题
 
 ### Field injection is not recommended
 

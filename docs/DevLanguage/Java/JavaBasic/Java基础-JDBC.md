@@ -503,9 +503,9 @@ Java官方，为了在应用程序中更好的应用连接池技术，定义了�
 public class DbBean {
 
 	/* 链接属性 */
-	private String driverName = "com.mysql.jdbc.Driver";
+	private String driverName = "com.mysql.cj.jdbc.Driver";
 
-	private String url = "jdbc:mysql://localhost:3306/test";
+	private String url = "jdbc:mysql://localhost:3307/demo";
 
 	private String userName = "root";
 
@@ -727,27 +727,27 @@ public class Test01 {
 
 class ThreadConnection implements Runnable {
 
-	public void run() {
-		for (int i = 0; i < 101; i++) {
-			Connection connection = ConnectionPoolManager.getConnection();
-			System.out.println(Thread.currentThread().getName() + ",connection-"+i+"：" + connection);
-      
-      //2、创建状态  
-      Statement state =con.createStatement();             
-      //3、查询数据库并返回结果  
-      ResultSet result =state.executeQuery("select * from users");             
-      //4、输出查询结果  
-      while(result.next()){  
-        System.out.println(result.getString("email"));  
-      }
-      //5、断开数据库连接  
-      result.close();  
-      state.close(); 
-      
-      //释放
-			ConnectionPoolManager.releaseConnection(connection);
-		}
-	}
+    public void run() {
+        for (int i = 0; i < 101; i++) {
+            Connection connection = ConnectionPoolManager.getConnection();
+            System.out.println(Thread.currentThread().getName() + ",connection-"+i+"：" + connection);
+
+            //2、创建状态  
+            Statement state =con.createStatement();             
+            //3、查询数据库并返回结果  
+            ResultSet result =state.executeQuery("select * from users");             
+            //4、输出查询结果  
+            while(result.next()){  
+              System.out.println(result.getString("email"));  
+            }
+            //5、断开数据库连接  
+            result.close();  
+            state.close(); 
+
+            //释放
+            ConnectionPoolManager.releaseConnection(connection);
+        }
+    }
 
 }
 ```

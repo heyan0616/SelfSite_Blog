@@ -71,7 +71,9 @@
 下面这个关系模拟Arraylist。(除去最上层的Interator和最下面其他的接口)
 
 <div style="display:flex;"><img src="./images/javacollection-2-1.jpg" alt="" style="display:block;" align="left"/></div>
-```java
+
+
+``` java
 package com.demo;
 
 public interface InterfaceFather {
@@ -79,6 +81,8 @@ public interface InterfaceFather {
     void methodInterfaceFather();
 }
 ```
+
+
 
 ```java
 package com.demo;

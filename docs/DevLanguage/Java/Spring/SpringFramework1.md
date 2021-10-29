@@ -269,7 +269,7 @@ Spring 管理的 bean 是根据 scope 来⽣成的，表示 bean 的作用域，
 - request:请求，表示在一次 HTTP 请求内有效。 
 - session:回话，表示在一个⽤户会话内有效。
 
-**request 和 session 只适⽤用于 Web 项⽬目，⼤大多数情况下，使用单例和原型较多。**<br />**prototype 模式当业务代码获取 IoC 容器器中的 bean 时，Spring 才去调⽤⽆参构造创建对应的 bean。**<br />**singleton 模式⽆论业务代码是否获取 IoC 容器器中的 bean，Spring 在加载 spring.xml 时就会创建 bean。**
+**request 和 session 只适用于 Web 项目，大多数情况下，使用单例和原型较多。**<br />**prototype 模式当业务代码获取 IoC 容器器中的 bean 时，Spring 才去调⽤⽆参构造创建对应的 bean。**<br />**singleton 模式⽆论业务代码是否获取 IoC 容器器中的 bean，Spring 在加载 spring.xml 时就会创建 bean。**
 
 ### **Spring 的继承**
 
@@ -384,7 +384,7 @@ public class StaticCarFactory {
 ```
 
 ``` xml
-<!-- 配置静态⼯工⼚厂创建 Car -->
+<!-- 配置静态工厂创建 Car -->
 <bean id="car" class="com.southwind.factory.StaticCarFactory" factory- method="getCar">
     <constructor-arg value="2"></constructor-arg>
 </bean>
@@ -411,10 +411,10 @@ public class InstanceCarFactory {
 ```
 
 ``` xml
-<!-- 配置实例例⼯工⼚厂 bean -->
+<!-- 配置实例工厂 bean -->
 <bean id="carFactory" class="com.southwind.factory.InstanceCarFactory"> 
 </bean>
-<!-- 赔偿实例例⼯工⼚厂创建 Car -->
+<!-- 配置实例⼯厂创建 Car -->
 <bean id="car2" factory-bean="carFactory" factory-method="getCar">
     <constructor-arg value="1"></constructor-arg>
 </bean>

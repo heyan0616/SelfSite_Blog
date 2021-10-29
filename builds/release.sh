@@ -13,3 +13,7 @@ echo "scp files to server complete"
 
 # check the folder size
 # $du -hs /path/to/directory
+
+echo "backup project to NAS server - start"
+/Users/heyan/self/workspace/backup.sh
+echo "backup project to NAS server - complete"

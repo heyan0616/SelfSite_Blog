@@ -121,7 +121,11 @@
 
 ## V2Ray安装配置
 
-参考 [V2Ray一键脚本]("https://www.hijk.pw/centos-one-click-install-v2ray/")一文安装配置（V2Ray具体细节可直接登录查看）。大概流程记录
+参考 [V2Ray一键脚本](https://www.hijk.pw/centos-one-click-install-v2ray/)一文安装配置（V2Ray具体细节可直接登录查看）。
+
+> 原参考文章貌似挂了，可参考 [【小白福利】2021最新*V2Ray*搭建图文教程,*V2Ray一键*搭建*脚本*!](https://www.itblogcn.com/article/406.html)
+
+大概流程记录
 
 - 登录instance执行
 

@@ -18,7 +18,6 @@
 - [博客部署的一些改进](/start/BlogDeployment.html)
 - [基于Google Cloud搭建V2Ray服务器](/start/V2RayWithGoogleCloud.html)
 
-
 <!-- comment -->
 
 
@@ -72,14 +71,31 @@
 - [ IO概念-同步、异步、阻塞、非阻塞](/DevLanguage/Java/JavaNIO/IOTheory.html)
 - [高性能网络编程中的IO模型与线程模型](/DevLanguage/Java/JavaNIO/IOModelAndThreadModel.html)
 - [JavaAIO](/DevLanguage/Java/JavaNIO/JavaAIO.html)
+- [JavaNIO框架-Netty](/DevLanguage/Java/JavaNIO/Netty.html)
+- [JavaNIO框架-Mina](/DevLanguage/Java/JavaNIO/Mina.html)
+
+#### Java并发
+
+- [0 - 多线程相关概念](/DevLanguage/Java/Java并发/0-多线程相关.html)
+- [0 - 什么是线程安全](/DevLanguage/Java/Java并发/0-什么是线程安全.html)
+- [0 - 并发相关概念](/DevLanguage/Java/Java并发/0-并发相关.html)
+- [0 - JMM(Java内存模型)](/DevLanguage/Java/Java并发/0-JMM.html)
+- [0 - 各种锁及Java实现](/DevLanguage/Java/Java并发/0-锁.html)
+- ... ...
 
 #### Spring Framework
 
 - [Spring Framework 基础](/DevLanguage/Java/Spring/SpringFramework1.html)
 - [Spring Framework 运行原理](/DevLanguage/Java/Spring/SpringFramework2.html)
 - [Spring Framework 注解](/DevLanguage/Java/Spring/SpringFramework3.html)
+- [Spring MVC](/DevLanguage/Java/Spring/SpringMVC.html)
 - [Spring Boot 系列 1](/DevLanguage/Java/Spring/SpringBoot.html)
 - [Spring Boot 系列 2](/DevLanguage/Java/Spring/SpringBoot2.html)
+- [Spring Boot 场景实例](/DevLanguage/Java/Spring/SpringBoot3.html)
+
+#### Java 常用框架
+
+- [ORM框架-MyBatis](/DevLanguage/Java/Java常用框架/ORM-MyBatis.html)
 
 
 
@@ -125,6 +141,8 @@
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
+- [Html 基础](/Frontend/HtmlCss/html.html)
+- [CSS 基础](/Frontend/HtmlCss/css.html)
 - to be added ...
 
 
@@ -133,6 +151,11 @@
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
+- [JavaScript 基础介绍](/Frontend/JavaScript/js1.html)
+- [JavaScript 语法基础](/Frontend/JavaScript/js2_ECMAScript.html)
+- [JavaScript DOM 编程](/Frontend/JavaScript/js3_DOM.html)
+- [JavaScript BOM 编程](/Frontend/JavaScript/js4_BOM.html)
+- [AJAX](/Frontend/JavaScript/js5_Ajax.html)
 - to be added ...
 
 
@@ -142,6 +165,16 @@
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [npm 基本使用](/Frontend/Nodejs/npm.html)
+- [NodeJs 基本使用](/Frontend/Nodejs/Nodejs.html)
+- to be added ...
+
+
+
+### Webpack
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [webpack 入门](/Frontend/Webpack/WebpackStart.html)
 - to be added ...
 
 
@@ -150,6 +183,9 @@
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
+- [React 项目搭建](/Frontend/React/ReactStart.html)
+- [React 基础](/Frontend/React/ReactBasic.html)
+- [React 实例](/Frontend/React/ReactCase.html)
 - to be added ...
 
 
@@ -159,14 +195,36 @@
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [Vue 实例以及生命周期](/Frontend/Vue/VueStart.html)
+- [Vue 入门1-基础概念与指令](/Frontend/Vue/VueBasic1.html)
+- [Vue 入门2-常用特性](/Frontend/Vue/VueBasic2.html)
+- [Vue 入门3-组件相关](/Frontend/Vue/VueBasic3.html)
+- [Vue 入门4-接口调用](/Frontend/Vue/VueBasic4.html)
 
 
 
-### Webpack
+### uni-app
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [webpack 入门](/Frontend/Webpack/WebpackStart.html)
+- [uni-app基础](/Frontend/uniapp/basic.html)
+- to be added ...
+
+
+
+### React Native
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [React Native基础](/Frontend/ReactNative/basic.html)
+- to be added ...
+
+
+
+### Flutter
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [Flutter基础](/Frontend/Flutter/basic.html)
 - to be added ...
 
 
@@ -187,6 +245,14 @@
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
 - [负载均衡相关知识](/Architect/LoadBalance.html)
+
+
+
+### Microservice
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- to be added
 
 
 
@@ -277,20 +343,23 @@
 
 <br>
 
-## 分布式系统
+## BigData & Distributed System
 
 <div style="height:14px;background-color:#a5d8bc" />
 <br>
 
+- [大数据平台(分布式)-总览](/BigDataAndDistributedSystem/)
+- [大数据架构(理论)](/BigDataAndDistributedSystem/BigDataArchitecture.html)
 
 
-### 分布式理论
+
+### 分布式系统理论
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [分布式与集群](/DistributedSystem/Theory/DistributedVsCluster.html)
-- [事务、ACID、CAP、一致性、BASE](/DistributedSystem/Theory/ACID-CAP-%E4%B8%80%E8%87%B4%E6%80%A7-BASE.html)
-- [一致性算法(2PC、3PC、Paxos、Raft、ZAB ...)](/DistributedSystem/Theory/ConsistencyAlgorithm.html)
+- [分布式与集群](/BigDataAndDistributedSystem/DistTheory/DistributedVsCluster.html)
+- [事务、ACID、CAP、一致性、BASE](/BigDataAndDistributedSystem/DistTheory/ACID-CAP-%E4%B8%80%E8%87%B4%E6%80%A7-BASE.html)
+- [一致性算法(2PC、3PC、Paxos、Raft、ZAB ...)](/BigDataAndDistributedSystem/DistTheory/ConsistencyAlgorithm.html)
 
 
 
@@ -300,26 +369,44 @@
 
 #### Zookeeper
 
-- [Zookeeper 入门](/DistributedSystem/ZookeeperEtcdRelated/zk_1.html)
-- [Zookeeper 安装](/DistributedSystem/ZookeeperEtcdRelated/zk_2.html)
-- [Zookeeper 内部原理](/DistributedSystem/ZookeeperEtcdRelated/zk_3.html)
-- [Zookeeper 实战](/DistributedSystem/ZookeeperEtcdRelated/zk_4.html)
+- [Zookeeper 入门](/BigDataAndDistributedSystem/DistCoordinate/zk_1.html)
+- [Zookeeper 安装](/BigDataAndDistributedSystem/DistCoordinate/zk_2.html)
+- [Zookeeper 内部原理](/BigDataAndDistributedSystem/DistCoordinate/zk_3.html)
+- [Zookeeper 实战](/BigDataAndDistributedSystem/DistCoordinate/zk_4.html)
 
 #### Others
 
-- [Zookeeper与Etcd的对比](/DistributedSystem/ZookeeperEtcdRelated/zk_vs_etcd.html)
+- [Zookeeper与Etcd的对比](/BigDataAndDistributedSystem/DistCoordinate/zk_vs_etcd.html)
 
 
 
-### 分布式消息/流平台
+### 数据摄取 Layer
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [消息队列相关知识](/DistributedSystem/DistributedMessageStreamPlatform/MQTheory.html)
+#### Flume
+
+- to be added ...
+
+#### Canal
+
+- to be added ...
+
+#### Logstash
+
+- to be added ...
+
+
+
+### 数据流 Layer
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [消息队列相关知识](/BigDataAndDistributedSystem/DataPipeline/MQTheory.html)
 
 #### Kafka
 
-- [kafka](/DistributedSystem/DistributedMessageStreamPlatform/Kafka.html)
+- [kafka](/BigDataAndDistributedSystem/DataPipeline/Kafka.html)
 
 #### Pulsar
 
@@ -327,55 +414,80 @@
 
 
 
+### 数据存储 Layer
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- to be added ...
+
+
+
+### 数据处理 Layer
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- to be added ...
+
+
+
+### 数据分析 Layer (OLAP)
+
+<div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
+
+- [Big Data Analysis Platform(OLAP) 简介](/BigDataAndDistributedSystem/DataAnalysis/)
+
+#### Apache Druid
+
+- [Apache Druid](/BigDataAndDistributedSystem/DataAnalysis/Druid.html)
+
+#### Apache Kylin
+
+- [Apache Kylin](/BigDataAndDistributedSystem/DataAnalysis/Kylin.html)
+
+
+
 ### 分布式系统基础框架Hadoop
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [Hadoop入门](/DistributedSystem/Hadoop/)
-- [Hadoop安装初体验](/DistributedSystem/Hadoop/HadoopInstall.html)
-- [HDFS](/DistributedSystem/Hadoop/hdfs.html)
-- [MapReduce](/DistributedSystem/Hadoop/MapReduce.html)
-- [Hive](/DistributedSystem/Hadoop/hive.html)
-- [HBase](/DistributedSystem/Hadoop/hbase.html)
-
-
-<!-- comment -->
-
-
-<br>
-
-## Big Data Platform
-
-<div style="height:14px;background-color:#a5d8bc" />
-<br>
+- [Hadoop入门](/BigDataAndDistributedSystem/Hadoop/)
+- [Hadoop安装初体验](/BigDataAndDistributedSystem/Hadoop/HadoopInstall.html)
+- [HDFS](/BigDataAndDistributedSystem/Hadoop/hdfs.html)
+- [MapReduce](/BigDataAndDistributedSystem/Hadoop/MapReduce.html)
+- [Hive](/BigDataAndDistributedSystem/Hadoop/hive.html)
+- [HBase](/BigDataAndDistributedSystem/Hadoop/hbase.html)
 
 
 
-### Splunk
+### Data Platform - Splunk
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [Splunk Start基础](/BigData/Splunk/SplunkStart.html)
+- [Splunk](/BigDataAndDistributedSystem/Splunk/)
+- [Splunk Fundmentals 1](/BigDataAndDistributedSystem/Splunk/SplunkFundmentals1.html)
+- [Splunk Fundmentals 2](/BigDataAndDistributedSystem/Splunk/SplunkFundmentals2.html)
+- [Splunk Fundmentals 3](/BigDataAndDistributedSystem/Splunk/SplunkFundmentals3.html)
+- [Splunk 相关知识](/BigDataAndDistributedSystem/Splunk/SplunkAdvance.html)
 
 
 
-### ELK Stack
+### Data Platform - ELK Stack
 
 <div style="height:1px;background-color:#00578a;opacity:0.2;margin-top:6px" />
 
-- [Elasticsearch 概念与总结](/BigData/ELK/ESConcepts-base.html)
-- [Elasticsearch 原理-分布式特性](/BigData/ELK/ESConcepts-cluster.html)
-- [Elasticsearch 原理-索引](/BigData/ELK/ESConcepts-index.html)
-- [Elasticsearch 原理-分词器 & 搜索相关性](/BigData/ELK/ESConcepts-AnalysisAndRelated.html)
-- [Elasticsearch Index-基本操作与并发](/BigData/ELK/ESIndex-basicoperation.html)
-- [Elasticsearch Index-Mapping & Setting](/BigData/ELK/ESIndex-mapping.html)
-- [Elasticsearch Index-Index Template](/BigData/ELK/ESIndex-IndexTemplate.html)
-- [Elasticsearch Index-Text Analysis](/BigData/ELK/ESIndex-TextAnalysis.html)
-- [Elasticsearch Index-Ingest & Script](/BigData/ELK/ESIndex-IngestAndScript.html)
-- [Elasticsearch 使用-基本CRUD](/BigData/ELK/ESUsage-crud.html)
-- [Elasticsearch 搜索-搜索相关](/BigData/ELK/ESSearch-search.html)
-- [Elasticsearch 搜索-查询DSL](/BigData/ELK/ESSearch-queryDSL.html)
-- [Elasticsearch 搜索-聚合](/BigData/ELK/ESSearch-aggregation.html)
+- [Elasticsearch 概念与总结](/BigDataAndDistributedSystem/ELK/ESConcepts-base.html)
+- [Elasticsearch 原理-分布式特性](/BigDataAndDistributedSystem/ELK/ESConcepts-cluster.html)
+- [Elasticsearch 原理-索引](/BigDataAndDistributedSystem/ELK/ESConcepts-index.html)
+- [Elasticsearch 原理-分词器 & 搜索相关性](/BigDataAndDistributedSystem/ELK/ESConcepts-AnalysisAndRelated.html)
+- [Elasticsearch Index-基本操作与并发](/BigDataAndDistributedSystem/ELK/ESIndex-basicoperation.html)
+- [Elasticsearch Index-Mapping & Setting](/BigDataAndDistributedSystem/ELK/ESIndex-mapping.html)
+- [Elasticsearch Index-Index Template](/BigDataAndDistributedSystem/ELK/ESIndex-IndexTemplate.html)
+- [Elasticsearch Index-Text Analysis](/BigDataAndDistributedSystem/ELK/ESIndex-TextAnalysis.html)
+- [Elasticsearch Index-Ingest & Script](/BigDataAndDistributedSystem/ELK/ESIndex-IngestAndScript.html)
+- [Elasticsearch 使用-基本CRUD](/BigDataAndDistributedSystem/ELK/ESUsage-crud.html)
+- [Elasticsearch 搜索-搜索相关](/BigDataAndDistributedSystem/ELK/ESSearch-search.html)
+- [Elasticsearch 搜索-查询DSL](/BigDataAndDistributedSystem/ELK/ESSearch-queryDSL.html)
+- [Elasticsearch 搜索-聚合](/BigDataAndDistributedSystem/ELK/ESSearch-aggregation.html)
 - to be added ...
 
 

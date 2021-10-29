@@ -369,7 +369,7 @@ public class Test {
 第十步，hisjt
 ```
 
-*** 使用bean工厂获取bean对象，生命周期是和上下文获取的不一样的，如下图** 
+**使用bean工厂获取bean对象，生命周期是和上下文获取的不一样的，如下图** 
 
 <div style="display:flex;"><img src="./images/sf2-08.png" alt="" style="zoom:100%;display:block;" align="left"/></div>
 

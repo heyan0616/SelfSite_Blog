@@ -13,7 +13,7 @@
 
 本文主要是对Java集合的一些详细介绍与总结。
 
-## 对象的存储：
+## 对象的存储
 
  ①数组（基本数据类型&引用数据类型）②集合（引用数据类型）
 
@@ -951,13 +951,15 @@ public class Test {
 **9**. HashSet:底层实现为哈希表(链表+数组)，线程不安全，查找效率高，增删效率低，通过元素的hashCode和equels方法保证了元素的唯一性。
 
 <div style="display:flex;"><img src="./images/javacollection-1-12.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+
 <div style="display:flex;"><img src="./images/javacollection-1-13.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
+
 上图为HashSet底层实现模式哈希表(数组+链表)，当一条链上元素超过8个以上后，会自动转换为红黑树来存储元素，提高查询效率。
 
 **10**. TreeSet:底层实现为二叉树，线程不安全，可对元素进行自动排序，保证元素唯一性的方式是compareTo方法返回0。
 
 <div style="display:flex;"><img src="./images/javacollection-1-14.jpg" alt="" style="zoom:80%;display:block;" align="left"/></div>
-<be>
+<br>
 
 **11**. LinkedHashSet:底层实现为链表和哈希表，线程不安全，存储的元素时有序的、唯一的，通过元素的hashCode和equels方法保证了元素的唯一性。
 
