@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "element-ui": "^2.15.1",
     "iview": "^3.5.4",
     "leancloud-storage": "^4.10.0",
